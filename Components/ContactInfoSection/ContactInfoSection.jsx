@@ -47,11 +47,12 @@ const ContactInfoSection = () => {
           </p>
         </div>
 
+        {/* Grid updated: 2 per row on small screens, 4 on large */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {infoItems.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-centers transition"
+              className="p-8 bg-white rounded-md shadow-sm flex flex-col items-center text-center transition"
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >

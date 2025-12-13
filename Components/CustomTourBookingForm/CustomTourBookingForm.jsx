@@ -66,7 +66,7 @@ const CustomTourBookingForm = () => {
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-8 lg:p-12 rounded-lg shadow-lg space-y-10"
+          className="bg-white py-8 px-6 lg:p-12 rounded-lg shadow-lg space-y-10"
         >
           {/* PERSONAL INFO */}
           <Section title="Personal Information" dataAos="fade-up">
@@ -234,10 +234,11 @@ const CustomTourBookingForm = () => {
           <div className="text-center" data-aos="fade-up">
             <button
               type="submit"
-              className="px-12 py-3 rounded-lg bg-[#4d7c9c] text-white font-semibold hover:bg-[#3a5a73] transition"
+              className="px-6 py-3 md:px-12 md:py-3 rounded-lg bg-[#4d7c9c] text-white font-semibold text-sm md:text-base hover:bg-[#3a5a73] transition"
             >
               Send Tour Request
             </button>
+
             <p className="mt-4 text-sm text-gray-500">
               We’ll contact you within minutes
             </p>

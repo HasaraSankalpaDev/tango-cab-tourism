@@ -66,10 +66,10 @@ const TourCard = ({ tour }) => {
             href={`https://wa.me/94700000000?text=I'm%20interested%20in%20the%20tour:%20${encodeURIComponent(
               tour.title
             )}`}
-            className="flex-1 text-center px-4 py-2 rounded-md font-semibold text-white text-sm sm:text-base
-            bg-[linear-gradient(191deg,rgba(79,126,156,1)_12%,rgba(120,157,157,1)_64%,rgba(130,160,153,1)_78%,rgba(232,188,118,1)_100%)]
-            hover:bg-[linear-gradient(191deg,rgba(77,124,156,1)_0%,rgba(232,188,118,1)_100%)]
-            transition-colors duration-300"
+            className="flex-1 flex items-center justify-center px-4 py-2 rounded-md font-semibold text-white text-sm sm:text-base
+      bg-[linear-gradient(191deg,rgba(79,126,156,1)_12%,rgba(120,157,157,1)_64%,rgba(130,160,153,1)_78%,rgba(232,188,118,1)_100%)]
+      hover:bg-[linear-gradient(191deg,rgba(77,124,156,1)_0%,rgba(232,188,118,1)_100%)]
+      transition-colors duration-300"
           >
             Book Now
           </a>
@@ -77,12 +77,12 @@ const TourCard = ({ tour }) => {
           {/* View */}
           <Link
             href={`/tours/${tour.id}`}
-            className="flex-1 text-center border-2 border-[#4d7c9c] text-[#4d7c9c]
-    px-4 py-2 rounded-md font-semibold text-sm sm:text-base
-    transition-all duration-300
-    hover:text-white
-    hover:border-transparent
-    hover:bg-[linear-gradient(191deg,rgba(79,126,156,1)_12%,rgba(232,188,118,1)_100%)]"
+            className="flex-1 flex items-center justify-center border-2 border-[#4d7c9c] text-[#4d7c9c]
+      px-4 py-2 rounded-md font-semibold text-sm sm:text-base
+      transition-all duration-300
+      hover:text-white
+      hover:border-transparent
+      hover:bg-[linear-gradient(191deg,rgba(79,126,156,1)_12%,rgba(232,188,118,1)_100%)]"
           >
             View Details
           </Link>

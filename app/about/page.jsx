@@ -55,10 +55,10 @@ const page = () => {
         </div>
 
         {/* Mission & Vision Section */}
-        <div className="bg-white py-20">
+        <div className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div
-              className="p-8 bg-gray-50 rounded-lg shadow-lg"
+              className="p-8 bg-gray-white/60 rounded-md shadow-sm"
               data-aos="fade-up"
             >
               <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
@@ -68,7 +68,7 @@ const page = () => {
               </p>
             </div>
             <div
-              className="p-8 bg-gray-50 rounded-xl shadow-lg"
+              className="p-8 bg-gray-white/60 rounded-md shadow-sm"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -79,7 +79,7 @@ const page = () => {
               </p>
             </div>
             <div
-              className="p-8 bg-gray-50 rounded-xl shadow-lg"
+              className="p-8 bg-gray-white/60 rounded-md shadow-sm"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -94,10 +94,10 @@ const page = () => {
 
         {/* TripAdvisor Section */}
         <div className="bg-white py-16 text-center" data-aos="fade-up">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
             We’re on TripAdvisor!
           </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+          <p className="text-sm sm:text-base text-gray-700 max-w-2xl mx-auto mb-8">
             Check out our reviews and see why travelers love Tango Cabs & Tours.
           </p>
           <div
@@ -123,7 +123,7 @@ const page = () => {
             href="https://www.tripadvisor.com/YourBusinessPage"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg bg-[#4d7c9c] text-white font-semibold hover:bg-[#3a5a73] transition"
+            className="px-4 py-2 rounded-lg bg-[#4d7c9c] text-white font-semibold hover:bg-[#3a5a73] transition text-sm sm:text-base"
             data-aos="fade-up"
             data-aos-delay="200"
           >
