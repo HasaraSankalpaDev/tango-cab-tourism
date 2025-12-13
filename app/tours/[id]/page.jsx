@@ -67,7 +67,7 @@ const TourDetailsPage = ({ params }) => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8">
           {/* Tour Title */}
           <h1
-            className="text-4xl lg:text-3xl font-bold text-gray-900 mb-8"
+            className="text-3xl lg:text-3xl font-bold text-gray-900 mb-8"
             data-aos="fade-up"
           >
             {tour.title}

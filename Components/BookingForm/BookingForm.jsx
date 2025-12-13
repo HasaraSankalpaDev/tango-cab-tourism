@@ -62,7 +62,7 @@ export const BookingForm = ({ tour }) => {
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h1 className="text-xl sm:text-1xl lg:text-3xl font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
             Book Your Dream Tour
           </h1>
           <p className="text-gray-600 text-base sm:text-lg">
@@ -206,11 +206,12 @@ export const BookingForm = ({ tour }) => {
           <div className="text-center" data-aos="fade-up" data-aos-delay="500">
             <button
               type="submit"
-              className="inline-flex items-center cursor-pointer justify-center px-12 py-3 rounded-md text-white font-semibold
-              bg-[#4d7c9c] hover:bg-[#3a5a73] transition"
+              className="inline-flex items-center justify-center px-8 sm:px-12 py-2 sm:py-3 rounded-md text-white text-sm sm:text-base font-semibold
+  bg-[#4d7c9c] hover:bg-[#3a5a73] transition"
             >
               Book a Tour
             </button>
+
             <p className="mt-4 text-sm text-gray-500">
               We'll call you within minutes to confirm your tour.
             </p>
