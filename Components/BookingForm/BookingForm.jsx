@@ -62,10 +62,10 @@ export const BookingForm = ({ tour }) => {
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h1 className="text-4xl lg:text-3xl font-bold text-gray-900 mb-4">
+          <h1 className="text-xl sm:text-1xl lg:text-3xl font-bold text-gray-900 mb-4">
             Book Your Dream Tour
           </h1>
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-600 text-base sm:text-lg">
             Fill in your details and we'll contact you shortly
           </p>
         </div>

@@ -161,15 +161,15 @@ const TourDetailsPage = ({ params }) => {
               <div className="flex flex-wrap gap-6 text-gray-700">
                 <div className="flex items-center gap-2 bg-white p-2 rounded-md shadow">
                   <IoTimeOutline className="text-[#e6a948] text-xl " />
-                  <span className="font-bold text-xl">{tour.duration}</span>
+                  <span className="font-bold text-lg">{tour.duration}</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white p-2 rounded-md shadow">
                   <IoLocationOutline className="text-[#4d7c9c] text-xl" />
-                  <span className="font-bold text-xl">{tour.location}</span>
+                  <span className="font-bold text-lg">{tour.location}</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white p-2 rounded-md shadow">
                   <IoPricetagOutline className="text-[#e8bc74] text-xl" />
-                  <span className="font-bold text-xl">{tour.price}</span>
+                  <span className="font-bold text-lg">{tour.price}</span>
                 </div>
               </div>
 

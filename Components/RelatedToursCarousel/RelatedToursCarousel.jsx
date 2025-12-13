@@ -18,14 +18,14 @@ const RelatedToursCarousel = ({ currentTourId }) => {
   const nextRef = useRef(null);
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-16 lg:py-20 bg-white relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
             Related Tours
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base">
             You may also like these amazing experiences
           </p>
         </div>
@@ -33,7 +33,7 @@ const RelatedToursCarousel = ({ currentTourId }) => {
         {/* Swiper */}
         <Swiper
           modules={[Autoplay, Navigation]}
-          spaceBetween={24}
+          spaceBetween={16}
           slidesPerView={1}
           autoplay={{ delay: 4500, disableOnInteraction: false }}
           navigation={{
@@ -46,8 +46,8 @@ const RelatedToursCarousel = ({ currentTourId }) => {
           }}
           className="items-stretch"
           breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 24 },
           }}
         >
           {relatedTours.map((tour) => (
@@ -61,15 +61,15 @@ const RelatedToursCarousel = ({ currentTourId }) => {
           {/* Custom Arrows */}
           <button
             ref={prevRef}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+            className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 sm:p-3 rounded-full transition"
           >
-            <FiChevronLeft size={28} />
+            <FiChevronLeft size={20} sm={28} />
           </button>
           <button
             ref={nextRef}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+            className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 sm:p-3 rounded-full transition"
           >
-            <FiChevronRight size={28} />
+            <FiChevronRight size={20} sm={28} />
           </button>
         </Swiper>
       </div>
