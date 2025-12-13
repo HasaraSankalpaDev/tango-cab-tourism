@@ -1,4 +1,5 @@
 import ContactHero from "@/Components/ContactHero/ContactHero";
+import ContactInfoSection from "@/Components/ContactInfoSection/ContactInfoSection";
 import FloatingIcons from "@/Components/FloatingIcons/FloatingIcons";
 import Footer from "@/Components/Footer/Footer";
 import GetInTouchSection from "@/Components/GetInTouchSection/GetInTouchSection";
@@ -10,6 +11,7 @@ const page = () => {
     <div>
       <Nav />
       <ContactHero />
+      <ContactInfoSection />
       <GetInTouchSection />
       <FloatingIcons />
       <Footer />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   IoPersonOutline,
   IoMailOutline,
@@ -12,6 +12,8 @@ import {
   IoChatbubbleOutline,
   IoCashOutline,
 } from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CustomTourBookingForm = () => {
   const [formData, setFormData] = useState({
@@ -32,6 +34,10 @@ const CustomTourBookingForm = () => {
     specialRequests: "",
   });
 
+  useEffect(() => {
+    AOS.init({ duration: 700, easing: "ease-out", once: true });
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -48,7 +54,7 @@ const CustomTourBookingForm = () => {
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
             Plan Your Custom Sri Lanka Tour
           </h1>
@@ -63,7 +69,7 @@ const CustomTourBookingForm = () => {
           className="bg-white p-8 lg:p-12 rounded-lg shadow-lg space-y-10"
         >
           {/* PERSONAL INFO */}
-          <Section title="Personal Information">
+          <Section title="Personal Information" dataAos="fade-up">
             <div className="grid md:grid-cols-2 gap-6">
               <Input
                 icon={<IoPersonOutline />}
@@ -106,7 +112,7 @@ const CustomTourBookingForm = () => {
           </Section>
 
           {/* TOUR DETAILS */}
-          <Section title="Tour Details">
+          <Section title="Tour Details" dataAos="fade-up">
             <div className="grid md:grid-cols-3 gap-6">
               <Input
                 icon={<IoCalendarOutline />}
@@ -141,7 +147,7 @@ const CustomTourBookingForm = () => {
           </Section>
 
           {/* LOCATIONS */}
-          <Section title="Locations">
+          <Section title="Locations" dataAos="fade-up">
             <div className="grid md:grid-cols-2 gap-6">
               <Input
                 label="Pickup Location"
@@ -162,6 +168,7 @@ const CustomTourBookingForm = () => {
             </div>
 
             <textarea
+              data-aos="fade-up"
               name="preferredLocations"
               rows="3"
               placeholder="Sigiriya, Ella, Kandy, Yala, Mirissa..."
@@ -172,7 +179,7 @@ const CustomTourBookingForm = () => {
           </Section>
 
           {/* PREFERENCES */}
-          <Section title="Preferences">
+          <Section title="Preferences" dataAos="fade-up">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Select
                 icon={<IoCarOutline />}
@@ -209,7 +216,7 @@ const CustomTourBookingForm = () => {
           </Section>
 
           {/* MESSAGE */}
-          <div>
+          <div data-aos="fade-up">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
               <IoChatbubbleOutline /> Special Requests
             </label>
@@ -224,7 +231,7 @@ const CustomTourBookingForm = () => {
           </div>
 
           {/* SUBMIT */}
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-up">
             <button
               type="submit"
               className="px-12 py-3 rounded-lg bg-[#4d7c9c] text-white font-semibold hover:bg-[#3a5a73] transition"
@@ -245,15 +252,15 @@ export default CustomTourBookingForm;
 
 /* ---------- Reusable Components ---------- */
 
-const Section = ({ title, children }) => (
-  <div>
+const Section = ({ title, children, dataAos }) => (
+  <div data-aos={dataAos || "fade-up"}>
     <h2 className="text-lg font-semibold text-gray-900 mb-6">{title}</h2>
     {children}
   </div>
 );
 
 const Input = ({ icon, label, ...props }) => (
-  <div className="space-y-2">
+  <div className="space-y-2" data-aos="fade-up">
     <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
       {icon} {label}
     </label>
@@ -265,7 +272,7 @@ const Input = ({ icon, label, ...props }) => (
 );
 
 const Select = ({ icon, options, placeholder, ...props }) => (
-  <div className="space-y-2">
+  <div className="space-y-2" data-aos="fade-up">
     <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
       {icon} {placeholder}
     </label>

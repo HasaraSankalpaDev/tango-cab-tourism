@@ -138,35 +138,9 @@ export const tours = [
       "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg",
     ],
   },
+
   {
     id: 6,
-    title: "Yala Safari Adventure",
-    duration: "1 Day",
-    location: "Yala National Park",
-    price: "$120",
-    shortDescription:
-      "Go on an exciting safari and witness leopards, elephants, and exotic wildlife in Yala.",
-    fullDescription: `
-      Experience an exciting safari in Yala National Park. See leopards, elephants, crocodiles, 
-      and a variety of birds in their natural habitat. Ideal for wildlife enthusiasts.
-      Includes safari vehicle and guide.
-    `,
-    highlights: [
-      "Leopard spotting",
-      "Elephants & wildlife",
-      "Birdwatching",
-      "Safari guide included",
-    ],
-    images: [
-      "https://images.pexels.com/photos/3606225/pexels-photo-3606225.jpeg",
-      "https://images.pexels.com/photos/208737/pexels-photo-208737.jpeg",
-      "https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg",
-      "https://images.pexels.com/photos/14041994/pexels-photo-14041994.jpeg",
-      "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg",
-    ],
-  },
-  {
-    id: 7,
     title: "Polonnaruwa Ancient City",
     duration: "1 Day",
     location: "Polonnaruwa",
@@ -193,7 +167,7 @@ export const tours = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     title: "Adam's Peak Sunrise Trek",
     duration: "1 Day",
     location: "Adam's Peak",
@@ -220,7 +194,7 @@ export const tours = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     title: "Bentota Beach Relaxation",
     duration: "1 Day",
     location: "Bentota",
@@ -246,7 +220,7 @@ export const tours = [
     ],
   },
   {
-    id: 10,
+    id: 9,
     title: "Colombo City Highlights",
     duration: "1 Day",
     location: "Colombo",

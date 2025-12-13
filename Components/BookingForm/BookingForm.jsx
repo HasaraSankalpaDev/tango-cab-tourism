@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   IoPersonOutline,
   IoMailOutline,
@@ -8,8 +8,13 @@ import {
   IoChatbubbleOutline,
   IoCalendarOutline,
   IoLocationOutline,
+  IoLogoWhatsapp,
 } from "react-icons/io5";
 import Image from "next/image";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const BookingForm = ({ tour }) => {
   const [formData, setFormData] = useState({
@@ -21,6 +26,14 @@ export const BookingForm = ({ tour }) => {
     location: "",
     message: "",
   });
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: true,
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,7 +60,8 @@ export const BookingForm = ({ tour }) => {
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
+        {/* Heading */}
+        <div className="text-center mb-12" data-aos="fade-up">
           <h1 className="text-4xl lg:text-3xl font-bold text-gray-900 mb-4">
             Book Your Dream Tour
           </h1>
@@ -56,13 +70,16 @@ export const BookingForm = ({ tour }) => {
           </p>
         </div>
 
+        {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="space-y-8 bg-white p-8 lg:p-12 rounded-2xl shadow-xl"
+          className="space-y-8 bg-white py-8 px-6 lg:py-12 lg:px-8 rounded-lg shadow-xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Full Name */}
-            <div className="space-y-2">
+            <div className="space-y-2" data-aos="fade-up" data-aos-delay="150">
               <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                 <IoPersonOutline className="text-[#4d7c9c]" />
                 Full Name
@@ -79,7 +96,7 @@ export const BookingForm = ({ tour }) => {
             </div>
 
             {/* Email */}
-            <div className="space-y-2">
+            <div className="space-y-2" data-aos="fade-up" data-aos-delay="200">
               <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                 <IoMailOutline className="text-[#4d7c9c]" />
                 Email Address
@@ -96,7 +113,7 @@ export const BookingForm = ({ tour }) => {
             </div>
 
             {/* Phone */}
-            <div className="space-y-2">
+            <div className="space-y-2" data-aos="fade-up" data-aos-delay="250">
               <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                 <IoCallOutline className="text-[#4d7c9c]" />
                 Phone Number
@@ -112,8 +129,8 @@ export const BookingForm = ({ tour }) => {
               />
             </div>
 
-            {/* Preferred Date */}
-            <div className="space-y-2">
+            {/* Date */}
+            <div className="space-y-2" data-aos="fade-up" data-aos-delay="300">
               <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                 <IoCalendarOutline className="text-[#4d7c9c]" />
                 Preferred Date
@@ -128,8 +145,8 @@ export const BookingForm = ({ tour }) => {
               />
             </div>
 
-            {/* Number of Persons */}
-            <div className="space-y-2">
+            {/* Persons */}
+            <div className="space-y-2" data-aos="fade-up" data-aos-delay="350">
               <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                 <IoPersonOutline className="text-[#4d7c9c]" />
                 Number of Persons
@@ -142,13 +159,12 @@ export const BookingForm = ({ tour }) => {
                 value={formData.persons}
                 onChange={handleChange}
                 required
-                placeholder="1"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50"
               />
             </div>
 
-            {/* Location Dropdown */}
-            <div className="space-y-2">
+            {/* Location */}
+            <div className="space-y-2" data-aos="fade-up" data-aos-delay="400">
               <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                 <IoLocationOutline className="text-[#4d7c9c]" />
                 Preferred Safari Location
@@ -170,8 +186,8 @@ export const BookingForm = ({ tour }) => {
             </div>
           </div>
 
-          {/* Special Requests */}
-          <div className="space-y-2">
+          {/* Message */}
+          <div className="space-y-2" data-aos="fade-up" data-aos-delay="450">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
               <IoChatbubbleOutline className="text-[#4d7c9c]" />
               Special Requests or Message (Optional)
@@ -186,11 +202,11 @@ export const BookingForm = ({ tour }) => {
             />
           </div>
 
-          {/* Submit Button */}
-          <div className="text-center">
+          {/* Button */}
+          <div className="text-center" data-aos="fade-up" data-aos-delay="500">
             <button
               type="submit"
-              className="inline-flex items-center justify-center px-12 py-3 rounded-md text-white font-semibold
+              className="inline-flex items-center cursor-pointer justify-center px-12 py-3 rounded-md text-white font-semibold
               bg-[#4d7c9c] hover:bg-[#3a5a73] transition"
             >
               Book a Tour
@@ -201,12 +217,15 @@ export const BookingForm = ({ tour }) => {
           </div>
         </form>
 
-        {/* Contact Info Section */}
-        <div className="mt-12 text-center space-y-4">
-          {/* TripAdvisor Logo */}
+        {/* Contact Info */}
+        <div
+          className="mt-12 text-center space-y-4"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <div className="flex justify-center items-center gap-2">
             <Image
-              src="/tripadvisor.png" // replace with your logo path
+              src="/tripadvisor.png"
               alt="TripAdvisor"
               width={120}
               height={40}
@@ -217,27 +236,44 @@ export const BookingForm = ({ tour }) => {
             </span>
           </div>
 
-          {/* Contact Methods */}
-          <div className="flex justify-center flex-wrap gap-6 mt-4 text-gray-700">
+          <div className="flex justify-center mt-8 flex-wrap gap-6  text-gray-700">
+            {/* Email */}
             <a
               href="mailto:info@tourcompany.com"
-              className="flex items-center gap-2 hover:text-[#4d7c9c] transition"
+              className="flex items-center gap-2 px-4 py-2 rounded-full
+    bg-white shadow-sm border border-gray-200
+    hover:border-[#4d7c9c] hover:text-[#4d7c9c]
+    transition-all duration-300"
             >
-              <IoMailOutline /> info@tourcompany.com
+              <IoMailOutline className="text-lg" />
+              info@tourcompany.com
             </a>
+
+            {/* Phone */}
             <a
               href="tel:+94700000000"
-              className="flex items-center gap-2 hover:text-[#4d7c9c] transition"
+              className="flex items-center gap-2 px-4 py-2 rounded-full
+    bg-white shadow-sm border border-gray-200
+    hover:border-[#4d7c9c] hover:text-[#4d7c9c]
+    transition-all duration-300"
             >
-              <IoCallOutline /> +94 70 000 0000
+              <IoCallOutline className="text-lg" />
+              +94 70 000 0000
             </a>
+
+            {/* WhatsApp – Premium Highlight */}
             <a
               href="https://wa.me/94700000000"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 hover:text-[#4d7c9c] transition"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full
+    bg-[#25D366] text-white font-semibold
+    shadow-lg shadow-green-500/30
+    hover:scale-105 hover:shadow-xl
+    transition-all duration-300"
             >
-              <IoChatbubbleOutline /> WhatsApp
+              <IoLogoWhatsapp className="text-xl" />
+              Chat on WhatsApp
             </a>
           </div>
         </div>

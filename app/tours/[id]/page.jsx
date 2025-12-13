@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { use } from "react";
+import { useState, useRef, useEffect, use } from "react";
 import { tours } from "@/Data/Tours";
 import Link from "next/link";
 import {
@@ -11,6 +10,8 @@ import {
 } from "react-icons/io5";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Nav from "@/Components/Nav/Nav";
+import { BookingForm } from "@/Components/BookingForm/BookingForm";
+import Footer from "@/Components/Footer/Footer";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,7 +20,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
-import { BookingForm } from "@/Components/BookingForm/BookingForm";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+import FloatingIcons from "@/Components/FloatingIcons/FloatingIcons";
+import RelatedToursCarousel from "@/Components/RelatedToursCarousel/RelatedToursCarousel";
 
 const TourDetailsPage = ({ params }) => {
   const { id } = use(params);
@@ -27,14 +33,22 @@ const TourDetailsPage = ({ params }) => {
   const tour = tours.find((t) => t.id === tourId);
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-  // Refs for custom navigation buttons
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  // Initialize AOS (client-side only)
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: "ease-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
   if (!tour) {
     return (
-      <div className="py-16 text-center">
+      <div className="py-16 text-center" data-aos="fade-up">
         <h2 className="text-2xl font-bold">Tour Not Found</h2>
         <Link
           href="/tours"
@@ -52,14 +66,20 @@ const TourDetailsPage = ({ params }) => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8">
           {/* Tour Title */}
-          <h1 className="text-4xl lg:text-3xl font-bold text-gray-900 mb-8">
+          <h1
+            className="text-4xl lg:text-3xl font-bold text-gray-900 mb-8"
+            data-aos="fade-up"
+          >
             {tour.title}
           </h1>
 
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Left: Swiper Carousel with Thumbnails */}
-            <div className="lg:w-1/2 space-y-6 relative">
-              {/* Main Carousel */}
+            <div
+              className="lg:w-1/2 space-y-6 relative"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <Swiper
                 modules={[Autoplay, Navigation, Thumbs]}
                 navigation={{
@@ -67,7 +87,6 @@ const TourDetailsPage = ({ params }) => {
                   nextEl: nextRef.current,
                 }}
                 onBeforeInit={(swiper) => {
-                  // Link custom buttons to Swiper navigation
                   swiper.params.navigation.prevEl = prevRef.current;
                   swiper.params.navigation.nextEl = nextRef.current;
                 }}
@@ -91,32 +110,27 @@ const TourDetailsPage = ({ params }) => {
                   </SwiperSlide>
                 ))}
 
-                {/* Custom Navigation Arrows (Overlaid on Main Image) */}
                 <button
                   ref={prevRef}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer
-                  text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
                 >
                   <FiChevronLeft size={28} />
                 </button>
-
                 <button
                   ref={nextRef}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer
-                  text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
                 >
                   <FiChevronRight size={28} />
                 </button>
               </Swiper>
 
-              {/* Thumbnail Carousel Below */}
               <Swiper
                 onSwiper={setThumbsSwiper}
                 modules={[Thumbs, FreeMode]}
                 spaceBetween={10}
                 slidesPerView={5}
-                freeMode={true}
-                watchSlidesProgress={true}
+                freeMode
+                watchSlidesProgress
                 breakpoints={{
                   320: { slidesPerView: 3 },
                   640: { slidesPerView: 4 },
@@ -137,7 +151,11 @@ const TourDetailsPage = ({ params }) => {
             </div>
 
             {/* Right: Tour Details */}
-            <div className="lg:w-1/2 flex flex-col gap-6">
+            <div
+              className="lg:w-1/2 flex flex-col gap-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <p className="text-gray-700 text-lg">{tour.shortDescription}</p>
 
               <div className="flex flex-wrap gap-6 text-gray-700">
@@ -175,7 +193,13 @@ const TourDetailsPage = ({ params }) => {
           </div>
         </div>
       </section>
-      <BookingForm tour={tour} />
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <BookingForm tour={tour} />
+      </div>
+      <RelatedToursCarousel currentTourId={tour.id} />
+      <FloatingIcons />
+      <Footer />
     </>
   );
 };

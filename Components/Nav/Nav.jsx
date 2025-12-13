@@ -30,6 +30,8 @@ const Nav = () => {
               width={80}
               height={80}
               className="object-contain"
+              priority
+              sizes="80px"
             />
           </div>
 
@@ -61,7 +63,7 @@ const Nav = () => {
           <div className="flex items-center gap-3">
             {/* Desktop Button */}
             <a
-              href="tel:+94700000000"
+              href="tel:+94777266518"
               className="hidden lg:flex items-center justify-center px-6 py-2 rounded-md text-white font-semibold
              bg-[linear-gradient(188deg,rgba(79,126,156,1)_0%,rgba(117,156,158,1)_54%,rgba(144,163,149,1)_79%,rgba(172,171,139,1)_90%,rgba(232,188,118,1)_100%)]
              hover:opacity-90 transition"
@@ -100,7 +102,7 @@ const Nav = () => {
 
             {/* Mobile Call Button */}
             <a
-              href="tel:+94700000000"
+              href="tel:+94777266518"
               className="w-full h-11 rounded-md text-white text-sm font-semibold flex items-center justify-center
               bg-[linear-gradient(189deg,rgba(77,124,156,1)0%,rgba(89,129,153,1)35%,rgba(132,147,142,1)100%,rgba(232,188,116,1)100%)]
               hover:opacity-90 transition"

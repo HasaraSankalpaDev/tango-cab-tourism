@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   IoPersonOutline,
   IoMailOutline,
   IoCallOutline,
   IoChatbubbleOutline,
 } from "react-icons/io5";
-import { FaWhatsapp, FaTripadvisor } from "react-icons/fa";
+import { FaTripadvisor, FaWhatsapp } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const GetInTouchSection = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +19,10 @@ const GetInTouchSection = () => {
     message: "",
   });
 
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true, easing: "ease-out" });
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -24,7 +30,6 @@ const GetInTouchSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
@@ -54,9 +59,10 @@ const GetInTouchSection = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
+        {/* Header */}
+        <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Get in Touch
           </h2>
@@ -70,14 +76,14 @@ const GetInTouchSection = () => {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
+            data-aos="fade-up"
             className="bg-white p-8 rounded-lg shadow-lg space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                  <IoPersonOutline className="text-[#4d7c9c]" />
-                  Name
+                  <IoPersonOutline className="text-[#4d7c9c]" /> Name
                 </label>
                 <input
                   type="text"
@@ -93,8 +99,7 @@ const GetInTouchSection = () => {
               {/* Email */}
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                  <IoMailOutline className="text-blue-500" />
-                  Email
+                  <IoMailOutline className="text-blue-500" /> Email
                 </label>
                 <input
                   type="email"
@@ -110,25 +115,20 @@ const GetInTouchSection = () => {
               {/* Phone */}
               <div className="space-y-2 md:col-span-2">
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                  <IoCallOutline className="text-orange-500" />
-                  Phone
+                  <IoCallOutline className="text-orange-500" /> Phone
                 </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+94 77 123 4567"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-500/20 outline-none bg-gray-50/50 transition"
-                />
+                <a
+                  href="tel:+94777266518"
+                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50/50 text-gray-700 flex items-center gap-2"
+                >
+                  +94 77 726 6518
+                </a>
               </div>
 
               {/* Message */}
               <div className="space-y-2 md:col-span-2">
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                  <IoChatbubbleOutline className="text-[#4d7c9c]" />
-                  Message
+                  <IoChatbubbleOutline className="text-[#4d7c9c]" /> Message
                 </label>
                 <textarea
                   name="message"
@@ -145,8 +145,8 @@ const GetInTouchSection = () => {
               <button
                 type="submit"
                 className="px-12 py-3 text-white font-semibold text-lg 
-                bg-[linear-gradient(189deg,rgba(77,124,156,1)0%,rgba(89,129,153,1)35%,rgba(132,147,142,1)100%,rgba(232,188,116,1)100%)]
-                hover:opacity-90 transition-transform transform hover:scale-102 rounded-lg"
+                bg-[linear-gradient(189deg,rgba(77,124,156,1)_0%,rgba(89,129,153,1)_35%,rgba(132,147,142,1)_100%,rgba(232,188,116,1)_100%)]
+                hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-lg"
               >
                 Send Message
               </button>
@@ -155,7 +155,7 @@ const GetInTouchSection = () => {
 
           {/* Contact Info / Map */}
           <div className="flex flex-col justify-start space-y-6">
-            {/* Small Map */}
+            {/* Map */}
             <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d79.861243!3d6.927079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2590c4f84b5b7%3A0x123456789abcdef!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
@@ -163,10 +163,10 @@ const GetInTouchSection = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
             </div>
 
-            {/* Contact Info Card with Highlighted Icons */}
+            {/* Contact Info Card */}
             <div className="bg-white p-8 rounded-lg shadow-lg space-y-4">
               <h3 className="text-xl font-semibold text-gray-900">
                 Contact Info
@@ -174,21 +174,31 @@ const GetInTouchSection = () => {
               <p className="text-gray-600">
                 Feel free to reach us through any of the following:
               </p>
-              <div className="space-y-3">
-                <p className="flex items-center gap-3 text-gray-700">
-                  <IoMailOutline className="text-blue-500 text-2xl" />
+              <div className="space-y-3 text-gray-700">
+                <p className="flex items-center gap-3">
+                  <IoMailOutline className="text-blue-500 text-xl" />{" "}
                   info@tangocabs.com
                 </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                  <IoCallOutline className="text-orange-500 text-2xl" />
-                  +94 77 000 0000
+                <p className="flex items-center gap-3">
+                  <FaWhatsapp className="text-green-500 text-xl" />
+                  <a
+                    href="https://wa.me/94777266518"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    +94 77 726 6518
+                  </a>
                 </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                  <FaWhatsapp className="text-green-500 text-2xl" />
-                  WhatsApp: +94 77 000 0000
+
+                <p className="flex items-center gap-3">
+                  <IoCallOutline className="text-orange-500 text-xl" />
+                  <a href="tel:+94777266518" className="hover:underline">
+                    +94 77 726 6518
+                  </a>
                 </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                  <FaTripadvisor className="text-[#34E27D] text-2xl" />
+                <p className="flex items-center gap-3">
+                  <FaTripadvisor className="text-[#34E27D] text-xl" />{" "}
                   TripAdvisor: Tango Cabs & Tours
                 </p>
               </div>
