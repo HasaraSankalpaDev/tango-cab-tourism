@@ -62,13 +62,22 @@ const GetInTouchSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="space-y-4 mb-12">
+          <h2
+            className="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             Get in Touch
           </h2>
-          <p className="text-gray-700 text-lg">
+
+          <p
+            className="text-gray-600 text-lg max-w-3xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Have questions or want to plan your next trip? Fill out the form and
-            we’ll contact you shortly.
+            we’ll contact you shortly
           </p>
         </div>
 
@@ -77,7 +86,7 @@ const GetInTouchSection = () => {
           <form
             onSubmit={handleSubmit}
             data-aos="fade-up"
-            className="bg-white p-8 rounded-lg shadow-lg space-y-6"
+            className="bg-white py-8 px-4 md:px-6 rounded-lg shadow-lg space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
@@ -92,7 +101,7 @@ const GetInTouchSection = () => {
                   onChange={handleChange}
                   placeholder="Your Name"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 transition"
+                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 transition"
                 />
               </div>
 
@@ -108,7 +117,7 @@ const GetInTouchSection = () => {
                   onChange={handleChange}
                   placeholder="your@email.com"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 outline-none bg-gray-50/50 transition"
+                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 outline-none bg-gray-50/50 transition"
                 />
               </div>
 
@@ -119,7 +128,7 @@ const GetInTouchSection = () => {
                 </label>
                 <a
                   href="tel:+94777266518"
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50/50 text-gray-700 flex items-center gap-2"
+                  className="block w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50/50 text-gray-700 flex items-center gap-2"
                 >
                   +94 77 726 6518
                 </a>
@@ -136,7 +145,7 @@ const GetInTouchSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Your message here..."
-                  className="w-full px-4 py-4 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 resize-none transition"
+                  className="w-full px-4 py-4 rounded-md border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 resize-none transition"
                 />
               </div>
             </div>
@@ -144,9 +153,9 @@ const GetInTouchSection = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-12 py-3 text-white font-semibold text-lg 
-                bg-[linear-gradient(189deg,rgba(77,124,156,1)_0%,rgba(89,129,153,1)_35%,rgba(132,147,142,1)_100%,rgba(232,188,116,1)_100%)]
-                hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-lg"
+                className="px-8 py-3 md:px-12 md:py-3 text-white font-semibold text-sm md:text-lg
+    bg-[linear-gradient(189deg,rgba(77,124,156,1)_0%,rgba(89,129,153,1)_35%,rgba(132,147,142,1)_100%,rgba(232,188,116,1)_100%)]
+    hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-lg"
               >
                 Send Message
               </button>

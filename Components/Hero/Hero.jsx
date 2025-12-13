@@ -59,16 +59,16 @@ const Hero = () => {
       {/* Navigation Buttons */}
       <button
         ref={prevRef}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
       >
-        <FiChevronLeft size={28} />
+        <FiChevronLeft className="text-2xl md:text-3xl" />
       </button>
 
       <button
         ref={nextRef}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
       >
-        <FiChevronRight size={28} />
+        <FiChevronRight className="text-2xl md:text-3xl" />
       </button>
 
       {/* Swiper */}
@@ -118,7 +118,7 @@ const Hero = () => {
                   {slide.title}
                 </h1>
                 <p
-                  className="text-lg text-white/85 leading-8 md:text-xl mb-6 w-[75%]"
+                  className="text-base md:text-lg text-white/85 leading-7 md:leading-8 mb-6 w-[75%]"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
@@ -126,7 +126,7 @@ const Hero = () => {
                 </p>
                 <a
                   href="#"
-                  className="px-8 py-3 rounded-md text-white font-semibold text-lg
+                  className="px-6 py-2 md:px-8 md:py-3 rounded-md text-white font-semibold text-base md:text-lg
                   bg-[linear-gradient(188deg,rgba(79,126,156,1)_0%,rgba(117,156,158,1)_54%,rgba(131,160,153,1)_64%,rgba(144,163,149,1)_70%,rgba(156,166,145,1)_79%,rgba(172,171,139,1)_89%,rgba(232,188,118,1)_100%)]
                   transition-all"
                   data-aos="fade-up"

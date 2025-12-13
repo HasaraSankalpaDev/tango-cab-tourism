@@ -60,10 +60,10 @@ const Footer = () => {
               <IoMailOutline /> info@tangocabs.com
             </li>
             <li className="flex items-center gap-2">
-              <IoCallOutline /> +94 77 000 0000
+              <IoCallOutline /> +94 77 726 6518
             </li>
             <li className="flex items-center gap-2">
-              <IoLogoWhatsapp /> +94 77 000 0000
+              <IoLogoWhatsapp /> +94 77 726 6518
             </li>
           </ul>
         </div>

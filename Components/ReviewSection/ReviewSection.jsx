@@ -42,7 +42,7 @@ const ReviewsSection = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Title */}
-        <div className="space-y-4 mb-12 text-center lg:text-left">
+        <div className="space-y-4 mb-12 text-left lg:text-left">
           <h4
             className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-semibold uppercase tracking-wider"
             data-aos="fade-up"
