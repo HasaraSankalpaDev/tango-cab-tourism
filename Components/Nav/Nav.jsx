@@ -23,7 +23,7 @@ const Nav = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo-transparent.png"
               alt="Logo"
@@ -33,7 +33,7 @@ const Nav = () => {
               priority
               sizes="80px"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
