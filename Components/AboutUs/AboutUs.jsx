@@ -21,7 +21,7 @@ export default function AboutUs() {
           {/* Left Text */}
           <div className="space-y-6">
             <h4
-              className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-semibold uppercase tracking-wider"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-medium uppercase tracking-wider"
               data-aos="fade-up"
             >
               About Tango Cabs & Tours
