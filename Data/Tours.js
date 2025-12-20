@@ -1,162 +1,241 @@
 export const tours = [
   {
     id: 1,
-    title: "Sigiriya & Dambulla Adventure",
-    duration: "1 Day",
-    location: "Sigiriya, Dambulla",
-    price: "$80",
+    title: "Airport to Sigiriya Scenic Transfer",
+    duration: "Approx. 4–5 Hours",
+    route: "Airport → Sigiriya",
     shortDescription:
-      "Climb the iconic Sigiriya Rock and explore the cave temples of Dambulla.",
+      "Comfortable airport transfer to Sigiriya with optional cultural stopovers.",
     fullDescription: `
-      Embark on a full-day adventure to Sigiriya and Dambulla. 
-      Start with climbing the legendary Sigiriya Rock Fortress, a UNESCO World Heritage site. 
-      Discover the frescoes, mirror wall, and breathtaking views from the top.
-      Then visit the Dambulla Cave Temples, marvel at ancient Buddha statues and murals.
-      Includes guided tour, transport, and lunch. Perfect for history and culture enthusiasts.
+      Start your Sri Lanka journey with a smooth transfer from the airport to Sigiriya.
+      Enjoy scenic countryside views with optional stops at Dambulla Cave Temple, local villages, or spice gardens.
     `,
     highlights: [
       "Sigiriya Rock Fortress",
-      "Dambulla Cave Temples",
-      "Stunning panoramic views",
-      "Guided cultural tour",
+      "Sigiriya scenic viewpoints",
+      "Dambulla Cave Temple",
+      "Pidurangala Rock viewpoints",
+      "Traditional village surroundings",
     ],
+
     images: [
-      "https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg",
-      "https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg",
-      "https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg",
-      "https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg",
+      "/sigiriya-2.png",
+      "/sigiriya-1.png",
+      "/sigiriya-3.png",
+      "/sigiriya-4.png",
     ],
   },
+
   {
     id: 2,
-    title: "Kandy Cultural Tour",
-    duration: "1 Day",
-    location: "Kandy",
-    price: "$70",
+    title: "Airport to Nuwara Eliya Hill Country Transfer",
+    duration: "Approx. 6–7 Hours",
+    route: "Airport → Nuwara Eliya",
     shortDescription:
-      "Experience Kandy's culture with visits to the Temple of the Tooth and local markets.",
+      "Scenic hill-country transfer through misty mountains, tea estates, and waterfalls.",
+
     fullDescription: `
-      Explore the cultural heart of Sri Lanka with a Kandy tour.
-      Visit the sacred Temple of the Tooth, stroll through the Royal Botanical Gardens,
-      and explore local markets. Learn about Kandy's rich history and traditions.
-      Includes transport and guided tour.
-    `,
+    Travel from the airport to Sri Lanka’s iconic hill country destination, Nuwara Eliya.
+    Experience breathtaking mountain views, rolling tea plantations, and refreshing
+    cool-climate scenery along the way, with optional scenic stopovers.
+  `,
+
     highlights: [
-      "Temple of the Tooth",
-      "Royal Botanical Gardens",
-      "Local markets and street food",
-      "Cultural heritage insights",
+      "Lush tea plantations & tea factory viewpoints",
+      "Beautiful waterfalls along the hill-country route",
+      "Cool-climate mountain atmosphere",
+      "Scenic winding roads through misty hills",
+      "Colonial-style landscapes of Little England",
+      "Panoramic viewpoints of valleys & mountains",
     ],
+
     images: [
-      "https://images.pexels.com/photos/14041994/pexels-photo-14041994.jpeg",
-      "https://images.pexels.com/photos/14041994/pexels-photo-14041994.jpeg",
-      "https://images.pexels.com/photos/14041994/pexels-photo-14041994.jpeg",
-      "https://images.pexels.com/photos/14041994/pexels-photo-14041994.jpeg",
+      "/nuwara-1.png",
+      "/ella-6.png",
+      "/nuwara-3.png",
+      "/nuwara-4.png",
+      "/nuwara-5.png",
     ],
   },
+
   {
     id: 3,
-    title: "Ella Hills & Tea Plantations",
-    duration: "1 Day",
-    location: "Ella",
-    price: "$90",
+    title: "Airport to Ella Scenic Transfer",
+    duration: "Approx. 6–7 Hours",
+    route: "Airport → Ella",
     shortDescription:
-      "Walk through scenic tea plantations and enjoy panoramic views of the Ella Gap.",
+      "Relaxing scenic transfer to Ella, passing misty mountains, waterfalls, and lush tea estates.",
+
     fullDescription: `
-      Discover the beauty of Sri Lanka's hill country in Ella.
-      Hike through lush tea plantations, see waterfalls, and enjoy breathtaking views of the Ella Gap.
-      Perfect for nature lovers and photographers.
-      Includes guided hiking and transport.
-    `,
+    Enjoy a comfortable and scenic journey from the airport to the charming town of Ella.
+    Marvel at panoramic mountain views, cascading waterfalls, and vibrant tea plantations.
+    Optional stopovers include the iconic Ravana Falls and viewpoints perfect for photography.
+  `,
+
     highlights: [
-      "Tea plantations",
-      "Ravana Falls",
-      "Little Adam's Peak hike",
-      "Panoramic mountain views",
+      "Ravana Falls – majestic waterfall stop",
+      "Vast tea plantations & local tea factory views",
+      "Panoramic mountain and valley vistas",
+      "Photography hotspots along the route",
+      "Peaceful village landscapes",
+      "Scenic winding roads through misty hills",
     ],
+
     images: [
-      "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg",
-      "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg",
-      "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg",
-      "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg",
+      "/ella-1.png",
+      "/ella-2.png",
+      "/ella-3.png",
+      "/ella-4.png",
+      "/ella-5.png",
+      "/ella-6.png",
     ],
   },
   {
     id: 4,
-    title: "Galle Fort & Beaches",
-    duration: "1 Day",
-    location: "Galle",
-    price: "$85",
+    title: "Airport to Galle & Southern Coast Transfer",
+    duration: "Approx. 2–3 Hours",
+    route: "Airport → Galle",
     shortDescription:
-      "Explore the historic Galle Fort and relax on southern beaches.",
+      "Scenic transfer to Galle with historic sites, colonial architecture, and beautiful southern beaches.",
+
     fullDescription: `
-      Visit the UNESCO-listed Galle Fort, stroll along its colonial streets, 
-      and enjoy the vibrant café culture. Afterward, relax on nearby beaches.
-      Includes transport, guide, and leisure time on the beach.
-    `,
+    Travel from the airport to the historic city of Galle along Sri Lanka's stunning southern coastline.
+    Explore the iconic Galle Fort with its colonial architecture, stroll along vibrant streets, 
+    and enjoy optional stops at Unawatuna Beach, coastal cafés, and local viewpoints.
+    Experience the perfect blend of culture, history, and seaside relaxation.
+  `,
+
     highlights: [
-      "Galle Fort",
-      "Colonial architecture",
-      "Cafés & local food",
-      "Beach relaxation",
+      "Galle Fort – UNESCO World Heritage Site",
+      "Colonial-era architecture and lighthouse views",
+      "Unawatuna Beach – pristine sand and calm waters",
+      "Coastal drive with scenic ocean vistas",
+      "Local cafés and seafood experiences",
+      "Photography spots along the southern coast",
     ],
+
     images: [
-      "https://images.pexels.com/photos/1072531/pexels-photo-1072531.jpeg",
-      "https://images.pexels.com/photos/1072531/pexels-photo-1072531.jpeg",
-      "https://images.pexels.com/photos/1072531/pexels-photo-1072531.jpeg",
-      "https://images.pexels.com/photos/1072531/pexels-photo-1072531.jpeg",
+      "/galle-1.png",
+      "/galle-2.png",
+      "/galle-3.png",
+      "/galle-4.png",
+      "/galle-5.png",
     ],
   },
   {
     id: 5,
-    title: "Nuwara Eliya Highlands Tour",
-    duration: "1 Day",
-    location: "Nuwara Eliya",
-    price: "$95",
+    title: "Airport to Kandy Cultural Transfer",
+    duration: "Approx. 3–4 Hours",
+    route: "Airport → Kandy",
     shortDescription:
-      "Discover the misty highlands, waterfalls, and colonial charm of Nuwara Eliya.",
+      "Experience Sri Lanka’s hill capital with rich culture, scenic drives, and heritage stops.",
+
     fullDescription: `
-      Explore the beautiful highlands of Nuwara Eliya, famous for tea plantations, waterfalls, 
-      and colonial-era architecture. Perfect for nature lovers and photographers.
-      Includes guided tour and transport.
-    `,
+    Journey from the airport to Kandy, Sri Lanka’s cultural heart, along picturesque hill roads.
+    Enjoy optional stops at the sacred Temple of the Tooth, explore the lush Royal Botanical Gardens,
+    and admire the surrounding tea plantations and scenic landscapes.
+    Immerse yourself in Sri Lanka’s heritage and natural beauty on this comfortable transfer.
+  `,
+
     highlights: [
-      "Tea plantations",
-      "Waterfalls",
-      "Gregory Lake",
-      "Colonial architecture",
+      "Temple of the Tooth – sacred Buddhist site",
+      "Royal Botanical Gardens – sprawling flora and serene walks",
+      "Cultural heritage and traditional architecture",
+      "Scenic hill-country drive with tea plantations",
+      "Photography spots with panoramic views",
+      "Local experiences along the route",
     ],
+
     images: [
-      "https://images.pexels.com/photos/319879/pexels-photo-319879.jpeg",
-      "https://images.pexels.com/photos/319879/pexels-photo-319879.jpeg",
-      "https://images.pexels.com/photos/319879/pexels-photo-319879.jpeg",
-      "https://images.pexels.com/photos/319879/pexels-photo-319879.jpeg",
+      "/nuwara-2.png",
+      "/kandy-cultural-1.png",
+      "/kandy-cultural-2.png",
+      "/kandy-cultural-3.png",
     ],
   },
   {
     id: 6,
-    title: "Polonnaruwa Ancient City",
-    duration: "1 Day",
-    location: "Polonnaruwa",
-    price: "$80",
+    title: "Airport to Kataragama Pilgrimage Transfer",
+    duration: "Approx. 6–7 Hours",
+    route: "Airport → Kataragama",
     shortDescription:
-      "Explore the UNESCO World Heritage site of Polonnaruwa with its ancient temples and statues.",
-    fullDescription: `
-      Visit the ancient city of Polonnaruwa, a UNESCO World Heritage site. 
-      Explore royal palaces, temples, and Buddha statues dating back to the 12th century.
-      Perfect for history lovers.
-    `,
+      "Spiritual journey to Sri Lanka’s sacred pilgrimage town.",
+    fullDescription: `Travel comfortably to Kataragama, a sacred site for Buddhists,
+      Hindus, and Muslims. Ideal for pilgrims and cultural travelers.`,
     highlights: [
-      "Ancient temples",
-      "Buddha statues",
-      "Royal palace ruins",
-      "Guided historical tour",
+      "Sacred temples",
+      "Pilgrimage route",
+      "Cultural experience",
+      "Peaceful journey",
+    ],
+    images: ["/katharagama.png", "/katharagama-2.png", "/katharagama-3.png"],
+  },
+
+  {
+    id: 7,
+    title: "Airport to Hiriketiya Beach Transfer",
+    duration: "Approx. 4–5 Hours",
+    route: "Airport → Hiriketiya",
+    shortDescription:
+      "Transfer to Sri Lanka’s popular surf and beach destination.",
+    fullDescription: `Head from the airport to Hiriketiya beach,
+      popular among surfers and digital nomads.`,
+    highlights: [
+      "Surf-friendly beach",
+      "Laid-back atmosphere",
+      "Beach cafés",
+      "Relaxed coastal drive",
     ],
     images: [
-      "https://images.pexels.com/photos/12584869/pexels-photo-12584869.jpeg",
-      "https://images.pexels.com/photos/12584869/pexels-photo-12584869.jpeg",
-      "https://images.pexels.com/photos/12584869/pexels-photo-12584869.jpeg",
-      "https://images.pexels.com/photos/12584869/pexels-photo-12584869.jpeg",
+      "/hirikatiya.png",
+      "/hirikatiya-2.png",
+      "/hirikatiya-3.png",
+      "/hirikatiya-4.png",
+      "/hirikatiya-5.png",
+    ],
+  },
+
+  {
+    id: 8,
+    title: "Airport to Yala Safari Transfer",
+    duration: "Approx. 5–6 Hours",
+    route: "Airport → Yala",
+    shortDescription:
+      "Airport transfer to Sri Lanka’s most famous national park.",
+    fullDescription: `Travel to Yala National Park, home to leopards, elephants,
+      and diverse wildlife. Ideal for safari travelers.`,
+    highlights: [
+      "Wildlife safari access",
+      "Leopard habitat",
+      "Nature experience",
+      "Adventure travel",
+    ],
+    images: ["/yala-2.png", "/yala-1.png", "/yala-3.png", "/yala-4.png"],
+  },
+
+  {
+    id: 9,
+    title: "Airport to Mirissa Beach Transfer",
+    duration: "Approx. 3–4 Hours",
+    route: "Airport → Mirissa",
+    shortDescription:
+      "Scenic transfer to Sri Lanka’s famous surf and beach destination.",
+    fullDescription: `
+      Travel from the airport to Mirissa Beach, known for its golden sands,
+      surf-friendly waves, and relaxed coastal atmosphere.
+      Optional stops at Weligama Beach and local viewpoints along the way.
+    `,
+    highlights: [
+      "Golden sandy beaches",
+      "Surfing spots",
+      "Coastal café experiences",
+      "Relaxed scenic drive",
+    ],
+    images: [
+      "/mirissa-1.png",
+      "/mirissa-2.png",
+      "/mirissa-3.png",
+      "/mirissa-4.png",
     ],
   },
 ];

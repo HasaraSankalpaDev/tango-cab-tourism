@@ -10,6 +10,7 @@ import ReviewSection from "@/Components/ReviewSection/ReviewSection";
 import ToursSection from "@/Components/ToursSection/ToursSection";
 import VehicleCard from "@/Components/VehicleCard/VehicleCard";
 import VehiclesSection from "@/Components/VehiclesSection/VehiclesSection";
+import WhatWeOffer from "@/Components/WhatWeOffer/WhatWeOffer";
 import React from "react";
 
 const page = () => {
@@ -21,6 +22,7 @@ const page = () => {
         <Hero />
         <AboutUs />
         <ToursSection />
+        <WhatWeOffer />
         <VehiclesSection />
         <ReviewSection />
         <GetInTouchSection />

@@ -259,7 +259,7 @@ export const BookingForm = ({ tour }) => {
     transition-all duration-300"
             >
               <IoCallOutline className="text-lg" />
-              +94 70 000 0000
+              +94 77 726 6518
             </a>
 
             {/* WhatsApp – Premium Highlight */}
