@@ -4,7 +4,7 @@ export const vehicles = [
     name: "Suzuki Wagon R",
     description:
       "Compact and comfortable car, perfect for city tours and short trips.",
-    price: "$50/day",
+    price: "$60/day",
     image: "https://riyasewana.com/uploads/suzuki-wagon-r-1312534122571.jpg",
   },
   {
