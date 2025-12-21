@@ -26,6 +26,7 @@ const Nav = () => {
           <Link href="/" className="flex items-center">
             <Image
               src="/logo-transparent.png"
+              href="/"
               alt="Logo"
               width={80}
               height={80}
@@ -38,7 +39,7 @@ const Nav = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className={`
@@ -55,7 +56,7 @@ const Nav = () => {
   `}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </nav>
 

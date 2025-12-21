@@ -26,7 +26,9 @@ const page = () => {
           data-aos="fade-up"
         >
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
+            <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+              Our Story
+            </h2>
             <p className="text-gray-700 mb-4">
               Founded in 2015, Tango Cabs & Tours has been dedicated to offering
               premium cab services and curated tours across Sri Lanka. Our
@@ -94,7 +96,7 @@ const page = () => {
 
         {/* TripAdvisor Section */}
         <div className="bg-white py-16 text-center" data-aos="fade-up">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
             We’re on TripAdvisor!
           </h2>
           <p className="text-sm sm:text-base text-gray-700 max-w-2xl mx-auto mb-8">

@@ -68,7 +68,7 @@ export default function WhatWeOffer() {
           </h4>
 
           <h2
-            className="text-2xl lg:text-4xl font-bold text-gray-900 mt-3"
+            className="text-2xl lg:text-4xl font-semibold text-gray-900 mt-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >

@@ -5,8 +5,7 @@ const TourHero = () => {
     <section
       className="w-full h-[20vh] bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage:
-          "url('https://images.pexels.com/photos/1072531/pexels-photo-1072531.jpeg')",
+        backgroundImage: "url('/galle-colonial.jpeg')",
       }}
     >
       <h1 className="text-2xl md:text-4xl font-bold text-white bg-black/30 px-4 py-2 rounded">

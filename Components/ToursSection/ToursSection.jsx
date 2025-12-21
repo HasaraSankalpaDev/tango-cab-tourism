@@ -12,7 +12,7 @@ const ToursSection = () => {
           <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-semibold uppercase tracking-wider">
             Our Tours
           </h4>
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight">
             Discover Sri Lanka With Tango Cabs & Tours
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl">

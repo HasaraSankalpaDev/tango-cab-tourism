@@ -21,14 +21,14 @@ export default function AboutUs() {
           {/* Left Text */}
           <div className="space-y-6">
             <h4
-              className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-medium uppercase tracking-wider"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-semibold uppercase tracking-wider"
               data-aos="fade-up"
             >
               About Tango Cabs & Tours
             </h4>
 
             <h1
-              className="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight"
+              className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -73,7 +73,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-2 gap-4">
             <div className="row-span-2" data-aos="fade-up" data-aos-delay="100">
               <Image
-                src="https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/about-1.png"
                 alt="Sri Lanka scenic beach"
                 width={800}
                 height={800}
@@ -84,7 +84,7 @@ export default function AboutUs() {
 
             <div data-aos="fade-up" data-aos-delay="200">
               <Image
-                src="https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/about-2.png"
                 alt="Sri Lanka tea plantations"
                 width={400}
                 height={400}
@@ -94,7 +94,7 @@ export default function AboutUs() {
 
             <div data-aos="fade-up" data-aos-delay="300">
               <Image
-                src="https://images.pexels.com/photos/667205/pexels-photo-667205.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/about-3.png"
                 alt="Sri Lanka cultural temple"
                 width={400}
                 height={400}

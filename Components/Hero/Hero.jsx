@@ -17,25 +17,25 @@ const slides = [
     title: "Sigiriya The Lion's Rock",
     text: "Climb the ancient Sigiriya Rock Fortress, marvel at breathtaking frescoes, and enjoy panoramic views of lush Sri Lankan landscapes.",
     btn: "Explore Sigiriya",
-    bg: "https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    bg: "/sigiriya.jpeg",
   },
   {
     title: "Ella Hills and Tea Plantations",
     text: "Discover the serene town of Ella, hike to Little Adam's Peak, visit the Nine Arches Bridge, and enjoy stunning tea plantation views.",
     btn: "Discover Ella",
-    bg: "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    bg: "/ella-plantation.jpeg",
   },
   {
     title: "Kandy Cultural Heart",
     text: "Explore the sacred Temple of the Tooth, stroll around Kandy Lake, and immerse yourself in vibrant cultural performances.",
     btn: "Visit Kandy",
-    bg: "https://images.pexels.com/photos/14041994/pexels-photo-14041994.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    bg: "/kandy-temple.jpeg",
   },
   {
     title: "Galle Colonial Charm",
     text: "Walk through the historic Galle Fort, enjoy boutique shopping, and experience stunning ocean views along the charming streets.",
     btn: "See Galle",
-    bg: "https://images.pexels.com/photos/1072531/pexels-photo-1072531.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    bg: "/galle-colonial.jpeg",
   },
 ];
 
@@ -59,14 +59,14 @@ const Hero = () => {
       {/* Navigation Buttons */}
       <button
         ref={prevRef}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
+        className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
       >
         <FiChevronLeft className="text-2xl md:text-3xl" />
       </button>
 
       <button
         ref={nextRef}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
+        className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
       >
         <FiChevronRight className="text-2xl md:text-3xl" />
       </button>
@@ -111,7 +111,7 @@ const Hero = () => {
                   Tango Cabs & Tour
                 </h2>
                 <h1
-                  className="text-4xl md:text-6xl font-bold mb-4"
+                  className="text-4xl md:text-6xl font-semibold mb-4"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -125,7 +125,7 @@ const Hero = () => {
                   {slide.text}
                 </p>
                 <a
-                  href="#"
+                  href="/tours"
                   className="px-6 py-2 md:px-8 md:py-3 rounded-md text-white font-semibold text-base md:text-lg
                   bg-[linear-gradient(188deg,rgba(79,126,156,1)_0%,rgba(117,156,158,1)_54%,rgba(131,160,153,1)_64%,rgba(144,163,149,1)_70%,rgba(156,166,145,1)_79%,rgba(172,171,139,1)_89%,rgba(232,188,118,1)_100%)]
                   transition-all"

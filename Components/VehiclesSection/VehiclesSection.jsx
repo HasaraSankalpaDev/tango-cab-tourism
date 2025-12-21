@@ -27,7 +27,7 @@ const VehiclesSection = () => {
             Our Vehicles
           </h4>
           <h2
-            className="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight"
+            className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
