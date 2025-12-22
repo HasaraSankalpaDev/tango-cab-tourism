@@ -133,7 +133,7 @@ Drop-off: ${formData.dropoffLocation || "N/A"}
 Preferred Tour Locations: ${formData.preferredTourLocations}
       `;
 
-      const phoneNumber = "+94702000982";
+      const phoneNumber = "+94777266518";
       const encodedMessage = encodeURIComponent(whatsappMessage);
       const whatsappURL = `https://wa.me/${phoneNumber.replace(
         /[^\d]/g,
