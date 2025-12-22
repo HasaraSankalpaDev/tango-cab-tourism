@@ -163,7 +163,7 @@ Preferred Tour Locations: ${formData.preferredTourLocations}
     <section className="py-20 bg-gray-50">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-4xl font-semibold text-center mb-12 text-gray-800">
+        <h1 className="text-2xl md:text-3xl font-semibold text-center mb-12 text-gray-800">
           Custom Sri Lanka Tour Booking
         </h1>
 
