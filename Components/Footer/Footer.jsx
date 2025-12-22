@@ -57,7 +57,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
-              <IoMailOutline /> info@tangocabs.com
+              <IoMailOutline /> tangocabssrilanka@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <IoCallOutline /> +94 77 726 6518

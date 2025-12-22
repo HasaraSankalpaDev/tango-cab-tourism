@@ -1,11 +1,12 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
-// Poppins font
+// Configure Poppins font
 const poppins = Poppins({
-  weight: ["400", "500", "600", "700"], // choose weights you want
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-poppins",
+  display: "swap", // ensures text is visible while font loads
 });
 
 export const metadata = {
@@ -15,10 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} font-sans antialiased`}>
-        {children}
-      </body>
+    <html lang="en" className={poppins.variable}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

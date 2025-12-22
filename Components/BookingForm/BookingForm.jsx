@@ -247,7 +247,7 @@ export const BookingForm = ({ tour }) => {
     transition-all duration-300"
             >
               <IoMailOutline className="text-lg" />
-              info@tourcompany.com
+              tangocabssrilanka@gmail.com
             </a>
 
             {/* Phone */}
@@ -264,7 +264,7 @@ export const BookingForm = ({ tour }) => {
 
             {/* WhatsApp – Premium Highlight */}
             <a
-              href="https://wa.me/94700000000"
+              href="https://wa.me/94777266518"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full
