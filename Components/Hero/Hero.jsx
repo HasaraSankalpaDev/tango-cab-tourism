@@ -105,7 +105,7 @@ const Hero = () => {
               {/* Content with AOS vertical animations */}
               <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
                 <h2
-                  className="text-2xl md:text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c]"
+                  className="text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c]"
                   data-aos="fade-up"
                 >
                   Tango Cabs & Tour

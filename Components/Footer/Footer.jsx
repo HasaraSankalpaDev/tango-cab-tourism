@@ -76,7 +76,7 @@ const Footer = () => {
               (Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=100063455562022#"
                   className="w-10 h-10 flex bg-[#4F7E9C] items-center justify-center rounded-full text-white shadow-lg transition hover:scale-110"
                 >
                   <Icon size={20} />

@@ -12,20 +12,20 @@ const ContactInfoSection = () => {
     {
       icon: <IoCallOutline size={28} className="text-[#4d7c9c]" />,
       title: "Call Us",
-      value: "+94 70 000 0000",
-      link: "tel:+94700000000",
+      value: "+94 77 726 65180",
+      link: "tel:+947772665180",
     },
     {
       icon: <IoMailOutline size={28} className="text-[#4d7c9c]" />,
       title: "Email",
-      value: "info@tourcompany.com",
-      link: "mailto:info@tourcompany.com",
+      value: "tangocabssrilanka@gmail.com",
+      link: "mailto:tangocabssrilanka@gmail.com",
     },
     {
       icon: <IoLocationOutline size={28} className="text-[#4d7c9c]" />,
       title: "Location",
-      value: "Colombo, Sri Lanka",
-      link: "https://goo.gl/maps/your-location",
+      value: "Tangalle, Sri Lanka",
+      link: "https://share.google/YICM3Ocwo6WeiGdxh",
     },
     {
       icon: <IoTimeOutline size={28} className="text-[#4d7c9c]" />,

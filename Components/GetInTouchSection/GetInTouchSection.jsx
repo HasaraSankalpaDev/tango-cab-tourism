@@ -230,7 +230,7 @@ const GetInTouchSection = () => {
             {/* Map */}
             <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d79.861243!3d6.927079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2590c4f84b5b7%3A0x123456789abcdef!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029306.0524007343!2d78.74004747092897!3d6.586051214091241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae14bb441a7f0e7%3A0x9df44b95977fd369!2sTango%20cabs!5e0!3m2!1sen!2slk!4v1766401018931!5m2!1sen!2slk"
                 className="w-full h-full border-0"
                 allowFullScreen=""
                 loading="lazy"
@@ -249,7 +249,7 @@ const GetInTouchSection = () => {
               <div className="space-y-3 text-gray-700">
                 <p className="flex items-center gap-3">
                   <IoMailOutline className="text-blue-500 text-xl" />{" "}
-                  info@tangocabs.com
+                  tangocabssrilanka@gmail.com
                 </p>
                 <p className="flex items-center gap-3">
                   <FaWhatsapp className="text-green-500 text-xl" />
@@ -270,7 +270,7 @@ const GetInTouchSection = () => {
                 </p>
                 <p className="flex items-center gap-3">
                   <FaTripadvisor className="text-[#34E27D] text-xl" />{" "}
-                  TripAdvisor: Tango Cabs & Tours
+                  TripAdvisor: Tango Cabs Sri Lanka
                 </p>
               </div>
             </div>

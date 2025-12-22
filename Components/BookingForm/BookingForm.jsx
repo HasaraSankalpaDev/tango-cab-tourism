@@ -11,10 +11,25 @@ import {
   IoLogoWhatsapp,
 } from "react-icons/io5";
 import Image from "next/image";
-
-// AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const WHATSAPP_NUMBER = "94777266518";
+
+const locations = [
+  "Airport to Sigiriya Scenic Transfer",
+  "Airport to Nuwara Eliya Hill Country Transfer",
+  "Airport to Ella Scenic Transfer",
+  "Airport to Galle & Southern Coast Transfer",
+  "Airport to Kandy Cultural Transfer",
+  "Airport to Kataragama Pilgrimage Transfer",
+  "Airport to Hiriketiya Beach Transfer",
+  "Airport to Yala Safari Transfer",
+  "Airport to Mirissa Beach Transfer",
+];
+
+// Simple text sanitizer
+const cleanText = (text) => text.replace(/[<>]/g, "").trim();
 
 export const BookingForm = ({ tour }) => {
   const [formData, setFormData] = useState({
@@ -40,22 +55,59 @@ export const BookingForm = ({ tour }) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(
-      `Thank you, ${formData.name}! Your booking request for "${
-        tour.title
-      }" at ${formData.location || "selected location"} has been sent.`
-    );
+  // Client-side validation
+  const validateForm = () => {
+    if (!/^[a-zA-Z\s]{2,40}$/.test(formData.name)) {
+      alert("Please enter a valid name (letters only)");
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      alert("Please enter a valid email address");
+      return false;
+    }
+    if (!/^\d{9,12}$/.test(formData.phone.replace(/\D/g, ""))) {
+      alert("Please enter a valid phone number");
+      return false;
+    }
+    if (!formData.date) {
+      alert("Please select a date");
+      return false;
+    }
+    if (!locations.includes(formData.location)) {
+      alert("Please select a valid location");
+      return false;
+    }
+    return true;
   };
 
-  const locations = [
-    "Yala National Park",
-    "Udawalawe National Park",
-    "Wilpattu National Park",
-    "Bundala National Park",
-    "Minneriya National Park",
-  ];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    const message = `
+Hi, I’m interested in booking a tour.
+
+Name: ${cleanText(formData.name)}
+Email: ${cleanText(formData.email)}
+Phone: ${cleanText(formData.phone)}
+
+I would like to know about the availability for the following tour:
+Tour: ${cleanText(formData.location)}
+Preferred Date: ${formData.date}
+Number of Persons: ${formData.persons}
+
+Additional Requests / Questions:
+${cleanText(formData.message || "No special requests")}
+
+Could you please provide more details and options? Thank you!
+`;
+
+    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -202,18 +254,19 @@ export const BookingForm = ({ tour }) => {
             />
           </div>
 
-          {/* Button */}
+          {/* Submit Button */}
           <div className="text-center" data-aos="fade-up" data-aos-delay="500">
             <button
               type="submit"
               className="inline-flex items-center justify-center px-8 sm:px-12 py-2 sm:py-3 rounded-md text-white text-sm sm:text-base font-semibold
-  bg-[#4d7c9c] hover:bg-[#3a5a73] transition"
+  bg-[#25D366] hover:bg-[#1DA851] transition"
             >
-              Book a Tour
+              <IoLogoWhatsapp className="mr-2 text-xl" />
+              Send via WhatsApp
             </button>
 
             <p className="mt-4 text-sm text-gray-500">
-              We'll call you within minutes to confirm your tour.
+              We'll open WhatsApp with your booking details.
             </p>
           </div>
         </form>
@@ -237,10 +290,10 @@ export const BookingForm = ({ tour }) => {
             </span>
           </div>
 
-          <div className="flex justify-center mt-8 flex-wrap gap-6  text-gray-700">
+          <div className="flex justify-center mt-8 flex-wrap gap-6 text-gray-700">
             {/* Email */}
             <a
-              href="mailto:info@tourcompany.com"
+              href="mailto:tangocabssrilanka@gmail.com"
               className="flex items-center gap-2 px-4 py-2 rounded-full
     bg-white shadow-sm border border-gray-200
     hover:border-[#4d7c9c] hover:text-[#4d7c9c]
@@ -252,7 +305,7 @@ export const BookingForm = ({ tour }) => {
 
             {/* Phone */}
             <a
-              href="tel:+94700000000"
+              href="tel:+94777266518"
               className="flex items-center gap-2 px-4 py-2 rounded-full
     bg-white shadow-sm border border-gray-200
     hover:border-[#4d7c9c] hover:text-[#4d7c9c]
@@ -262,9 +315,9 @@ export const BookingForm = ({ tour }) => {
               +94 77 726 6518
             </a>
 
-            {/* WhatsApp – Premium Highlight */}
+            {/* WhatsApp */}
             <a
-              href="https://wa.me/94777266518"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full

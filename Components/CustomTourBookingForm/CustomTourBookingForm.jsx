@@ -170,7 +170,7 @@ Preferred Tour Locations: ${formData.preferredTourLocations}
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="bg-white p-10 rounded-2xl shadow-xl"
+          className="bg-white py-8 px-6 md:px-10 md:py-10 rounded-md shadow-lg"
         >
           <div className="grid md:grid-cols-2 gap-8">
             <Input
@@ -296,7 +296,7 @@ Preferred Tour Locations: ${formData.preferredTourLocations}
           <div className="text-center mt-10">
             <button
               type="submit"
-              className="px-12 py-3 bg-[#4d7c9c] text-white text-lg font-semibold rounded-md hover:bg-[#3a5f7f] transition"
+              className="px-12 py-3 bg-[#4d7c9c] text-white text-sm mg:text-lg font-semibold rounded-md hover:bg-[#3a5f7f] transition"
             >
               Send Tour Request
             </button>
