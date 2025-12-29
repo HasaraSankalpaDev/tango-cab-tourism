@@ -17,7 +17,7 @@ const slides = [
     title: "Sigiriya The Lion's Rock",
     text: "Climb the ancient Sigiriya Rock Fortress, marvel at breathtaking frescoes, and enjoy panoramic views of lush Sri Lankan landscapes.",
     btn: "Explore Sigiriya",
-    bg: "/sigiriya.png",
+    bg: "/sigiriya-2.png",
   },
   {
     title: "Ella Hills and Tea Plantations",
