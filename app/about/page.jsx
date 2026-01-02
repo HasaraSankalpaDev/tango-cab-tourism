@@ -190,7 +190,7 @@ const page = () => {
               </a>
             </div>
             <a
-              href="https://www.tripadvisor.com/YourBusinessPage"
+              href="https://www.tripadvisor.com/Attraction_Review-g304142-d34097471-Reviews-Tango_Cabs_Sri_lanka-Tangalle_Southern_Province.html"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-[#4d7c9c] text-white font-semibold hover:bg-[#3a5a73] transition text-sm sm:text-base"

@@ -18,7 +18,7 @@ const FloatingIcons = () => {
 
       {/* TripAdvisor */}
       <a
-        href="https://www.tripadvisor.com/YourPage"
+        href="https://www.tripadvisor.com/Attraction_Review-g304142-d34097471-Reviews-Tango_Cabs_Sri_lanka-Tangalle_Southern_Province.html"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 flex items-center justify-center bg-[#34E27D] hover:bg-[#28b76a] text-white rounded-full shadow-lg transition-transform transform hover:scale-110"
