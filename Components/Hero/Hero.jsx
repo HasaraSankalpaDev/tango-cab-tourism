@@ -17,26 +17,26 @@ const slides = [
     title: "Sigiriya The Lion's Rock",
     text: "Climb the ancient Sigiriya Rock Fortress, marvel at breathtaking frescoes, and enjoy panoramic views of lush Sri Lankan landscapes.",
     btn: "Explore Sigiriya",
-    bg: "/sigiriya-2.png",
+    bg: "/sigiriya-2.avif",
   },
   {
     title: "Ella Hills and Tea Plantations",
     text: "Discover the serene town of Ella, hike to Little Adam's Peak, visit the Nine Arches Bridge, and enjoy stunning tea plantation views.",
     btn: "Discover Ella",
-    bg: "/ella-bridge.png",
+    bg: "/ella-bridge.avif",
   },
 
   {
     title: "Nuwara Eliya – Little England",
     text: "Experience the cool climate of Nuwara Eliya, explore endless tea estates, misty mountains, scenic waterfalls, and charming colonial architecture.",
     btn: "Explore Nuwara Eliya",
-    bg: "/hills.png",
+    bg: "/hills.avif",
   },
   {
     title: "Mirissa & Weligama Coast",
     text: "Enjoy golden beaches, gentle ocean waves, whale watching experiences, and unforgettable sunsets along Sri Lanka’s southern coastline.",
     btn: "Discover Mirissa",
-    bg: "/beach.png",
+    bg: "/beach.avif",
   },
 ];
 
