@@ -216,7 +216,7 @@ const GetInTouchSection = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-8 py-3 md:px-12 md:py-3 text-white font-semibold text-sm md:text-lg
+                className="px-8 cursor-pointer py-3 md:px-12 md:py-3 text-white font-semibold text-sm md:text-lg
                   bg-[linear-gradient(189deg,rgba(77,124,156,1)_0%,rgba(89,129,153,1)_35%,rgba(132,147,142,1)_100%,rgba(232,188,116,1)_100%)]
                   hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-lg"
               >
