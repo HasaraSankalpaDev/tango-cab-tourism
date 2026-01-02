@@ -107,7 +107,10 @@ export default function RootLayout({ children }) {
 
         {/* Theme Color */}
         <meta name="theme-color" content="#0f766e" />
-
+        <meta
+          name="google-site-verification"
+          content="JImfSqz5q_ny2ArnxDyGG5OLDNPcnjb29c4oxocvgSo"
+        />
         {/* Mobile Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
