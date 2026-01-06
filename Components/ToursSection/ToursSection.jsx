@@ -12,10 +12,10 @@ const ToursSection = () => {
           <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-semibold uppercase tracking-wider">
             Our Tours
           </h4>
-          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight">
             Discover Sri Lanka With Tango Cabs & Tours
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl">
+          <p className="text-gray-600 text-md max-w-3xl">
             Explore the most beautiful corners of Sri Lanka with our curated
             tours and premium cab services. From serene beaches to breathtaking
             mountains, we make every journey safe, comfortable, and
@@ -25,16 +25,26 @@ const ToursSection = () => {
 
         {/* Tours Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tours.map((tour, index) => (
-            <div
-              key={tour.id}
-              className={`transition-transform duration-700 delay-${
-                index * 100
-              } ease-out transform hover:-translate-y-2 cupsor-pointer`}
-            >
-              <TourCard tour={tour} />
-            </div>
-          ))}
+          {tours.map((tour, index) => {
+            // Use fixed delay classes (must be in Tailwind safelist)
+            const delayClasses = [
+              "delay-0",
+              "delay-100",
+              "delay-200",
+              "delay-300",
+              "delay-400",
+            ];
+            const delayClass = delayClasses[index % delayClasses.length];
+
+            return (
+              <div
+                key={tour.id}
+                className={`transition-transform duration-700 ${delayClass} ease-out transform hover:-translate-y-2 cursor-pointer`}
+              >
+                <TourCard tour={tour} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

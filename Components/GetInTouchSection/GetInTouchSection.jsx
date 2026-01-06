@@ -115,14 +115,14 @@ const GetInTouchSection = () => {
         {/* Header */}
         <div className="space-y-4 mb-12">
           <h2
-            className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
+            className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Get in Touch
           </h2>
           <p
-            className="text-gray-600 text-lg max-w-3xl"
+            className="text-gray-600 text-md max-w-3xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -218,7 +218,7 @@ const GetInTouchSection = () => {
                 type="submit"
                 className="px-8 cursor-pointer py-3 md:px-12 md:py-3 text-white font-semibold text-sm md:text-lg
                   bg-[linear-gradient(189deg,rgba(77,124,156,1)_0%,rgba(89,129,153,1)_35%,rgba(132,147,142,1)_100%,rgba(232,188,116,1)_100%)]
-                  hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-lg"
+                  hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-sm"
               >
                 Send Message
               </button>

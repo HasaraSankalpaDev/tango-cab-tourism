@@ -28,7 +28,7 @@ export default function AboutUs() {
             </h4>
 
             <h1
-              className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
+              className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -38,7 +38,7 @@ export default function AboutUs() {
             </h1>
 
             <div
-              className="space-y-4 text-gray-600 text-lg"
+              className="space-y-4 text-gray-600 text-md"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -58,7 +58,7 @@ export default function AboutUs() {
 
             <a
               href="tel:+94777266518"
-              className="inline-flex items-center justify-center px-5 py-3 md:px-6 md:py-3 rounded-md text-white font-semibold text-sm md:text-base
+              className="inline-flex items-center justify-center px-5 py-3 md:px-6 md:py-3 rounded-sm text-white font-semibold text-sm md:text-base
     bg-[linear-gradient(188deg,rgba(79,126,156,1)_0%,rgba(117,156,158,1)_54%,rgba(131,160,153,1)_64%,rgba(144,163,149,1)_70%,rgba(156,166,145,1)_79%,rgba(172,171,139,1)_89%,rgba(232,188,118,1)_100%)]
     hover:bg-[linear-gradient(188deg,#4d7c9c_0%,#e8bc74_100%)]
     transition-colors duration-500"

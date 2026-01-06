@@ -50,14 +50,14 @@ const ReviewsSection = () => {
             Traveler Reviews
           </h4>
           <h2
-            className="text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
+            className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Hear From Our Happy Travelers
           </h2>
           <p
-            className="text-gray-600 text-lg max-w-3xl"
+            className="text-gray-600 text-md max-w-3xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -81,7 +81,7 @@ const ReviewsSection = () => {
           {reviews.map((review, idx) => (
             <SwiperSlide key={idx}>
               <div
-                className="bg-white/80 border-2 border-gray-200 p-6 rounded-lg shadow-lg h-full flex flex-col justify-between"
+                className="bg-white/80 border-2 border-gray-200 p-6 rounded-lg shadow-lg flex flex-col justify-between min-h-[250px]"
                 data-aos="fade-up"
                 data-aos-delay={idx * 100}
               >
@@ -89,7 +89,7 @@ const ReviewsSection = () => {
                   <h3 className="font-semibold text-gray-900">{review.name}</h3>
                   <p className="text-sm text-gray-500">{review.location}</p>
                 </div>
-                <p className="text-gray-700 mb-4">{review.text}</p>
+                <p className="text-gray-700 mb-4 flex-1">{review.text}</p>
                 <div className="flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span
@@ -103,7 +103,7 @@ const ReviewsSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="pt-18"></div>
+              <div className="pt-10"></div>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -300,7 +300,7 @@ const Input = ({ icon, label, error, touched, placeholder, ...props }) => {
         <input
           {...props}
           placeholder={placeholder}
-          className={`w-full px-4 py-3 rounded-lg border-2 outline-none transition ${
+          className={`w-full px-4 py-3 rounded-lg border-1 outline-none transition ${
             showError
               ? "border-red-500 bg-red-50"
               : "border-gray-300 focus:border-[#4d7c9c] focus:ring-[#4d7c9c]/20"
@@ -333,7 +333,7 @@ const Textarea = ({ label, error, touched, placeholder, ...props }) => {
           {...props}
           placeholder={placeholder}
           rows={3}
-          className={`w-full px-4 py-3 rounded-lg border-2 outline-none transition resize-none ${
+          className={`w-full px-4 py-3 rounded-lg border-1 outline-none transition resize-none ${
             showError
               ? "border-red-500 bg-red-50"
               : "border-gray-300 focus:border-[#4d7c9c] focus:ring-[#4d7c9c]/20"

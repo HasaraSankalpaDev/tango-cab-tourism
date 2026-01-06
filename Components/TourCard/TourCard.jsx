@@ -73,7 +73,7 @@ const TourCard = ({ tour }) => {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md font-semibold text-white text-sm
+            className="w-full sm:flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-sm font-semibold text-white text-sm
   bg-[linear-gradient(191deg,rgba(79,126,156,1)_12%,rgba(120,157,157,1)_64%,rgba(130,160,153,1)_78%,rgba(232,188,118,1)_100%)]
   hover:opacity-90 transition"
           >
@@ -83,13 +83,15 @@ const TourCard = ({ tour }) => {
           {/* Details */}
           <Link
             href={`/tours/${tour.id}`}
-            className="w-full sm:flex-1 flex items-center justify-center border-2 border-[#4d7c9c] text-[#4d7c9c]
-      px-4 py-2 rounded-md font-semibold text-sm
-      transition-all duration-300
-      hover:text-white
-      hover:border-transparent
-      hover:bg-[linear-gradient(191deg,rgba(79,126,156,1)_12%,rgba(232,188,118,1)_100%)]"
+            className="w-full sm:flex-1 flex items-center justify-center
+             border-1 border-[#4d7c9c] text-[#4d7c9c]
+             px-4 py-2 rounded-sm font-semibold text-sm
+             transition-all duration-300
+             hover:text-white
+             hover:bg-[#4d7c9c]
+             hover:border-transparent"
           >
+            {" "}
             View Details
           </Link>
         </div>

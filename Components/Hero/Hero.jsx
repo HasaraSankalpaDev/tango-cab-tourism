@@ -106,20 +106,20 @@ const Hero = () => {
               {/* Content with AOS vertical animations */}
               <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
                 <h2
-                  className="text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c]"
+                  className="text-2xl md:text-2sxl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c]"
                   data-aos="fade-up"
                 >
                   Tango Cabs & Tour
                 </h2>
                 <h1
-                  className="text-4xl md:text-6xl font-semibold mb-4"
+                  className="text-4xl md:text-5xl font-semibold mb-4"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
                   {slide.title}
                 </h1>
                 <p
-                  className="text-base md:text-lg text-white/85 leading-7 md:leading-8 mb-6 w-[75%]"
+                  className="text-base md:text-md text-white/85 leading-7 md:leading-8 mb-6 w-[75%]"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
@@ -127,7 +127,7 @@ const Hero = () => {
                 </p>
                 <a
                   href="/tours"
-                  className="px-6 py-2 md:px-8 md:py-3 rounded-md text-white font-semibold text-base md:text-lg
+                  className="px-6 py-2 md:px-8 md:py-2 rounded-sm text-white font-semibold text-base md:text-lg
                   bg-[linear-gradient(188deg,rgba(79,126,156,1)_0%,rgba(117,156,158,1)_54%,rgba(131,160,153,1)_64%,rgba(144,163,149,1)_70%,rgba(156,166,145,1)_79%,rgba(172,171,139,1)_89%,rgba(232,188,118,1)_100%)]
                   transition-all"
                   data-aos="fade-up"
