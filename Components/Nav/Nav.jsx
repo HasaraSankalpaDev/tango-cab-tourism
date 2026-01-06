@@ -84,7 +84,7 @@ const Nav = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <nav className="lg:hidden flex flex-col gap-4 py-4 border-t border-gray-200 animate-fadeIn">
+          <nav className="lg:hidden flex flex-col gap-4  border-t border-gray-200 animate-fadeIn">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -104,7 +104,7 @@ const Nav = () => {
             {/* Mobile Call Button */}
             <a
               href="tel:+94777266518"
-              className="w-full h-11 rounded-sm text-white text-sm font-semibold flex items-center justify-center
+              className="w-full h-11 rounded-sm text-white text-sm mb-4 font-semibold flex items-center justify-center
               bg-[linear-gradient(189deg,rgba(77,124,156,1)0%,rgba(89,129,153,1)35%,rgba(132,147,142,1)100%,rgba(232,188,116,1)100%)]
               hover:opacity-90 transition"
             >

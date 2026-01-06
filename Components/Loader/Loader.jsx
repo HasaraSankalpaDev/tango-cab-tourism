@@ -18,7 +18,7 @@ const Loader = () => {
 
   return (
     <div className="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
-      <div className="relative w-40 h-40 flex items-center justify-center">
+      <div className="relative w-36 h-36 flex items-center justify-center">
         {/* Logo */}
         <Image
           src="/logo.jpeg" // replace with your logo path
@@ -28,7 +28,7 @@ const Loader = () => {
         />
 
         {/* Spinning ring */}
-        <span className="absolute w-40 h-40 rounded-full border-4 border-[#2e4a5e] border-t-transparent animate-spin"></span>
+        <span className="absolute w-36 h-36 rounded-full border-4 border-[#2e4a5e] border-t-transparent animate-spin"></span>
       </div>
     </div>
   );
