@@ -19,10 +19,10 @@ export const tours = [
     ],
 
     images: [
-      "/sigiriya-2.png",
-      "/sigiriya-1.png",
-      "/sigiriya-3.png",
-      "/sigiriya-4.png",
+      "/sigiriya-2.webp",
+      "/sigiriya-1.webp",
+      "/sigiriya-3.webp",
+      "/sigiriya-4.webp",
     ],
   },
 
@@ -50,11 +50,11 @@ export const tours = [
     ],
 
     images: [
-      "/nuwara-1.png",
-      "/ella-6.png",
-      "/nuwara-3.png",
-      "/nuwara-4.png",
-      "/nuwara-5.png",
+      "/nuwara-1.webp",
+      "/ella-6.webp",
+      "/nuwara-3.webp",
+      "/nuwara-4.webp",
+      "/nuwara-5.webp",
     ],
   },
 
@@ -87,7 +87,7 @@ export const tours = [
       "/ella-3.png",
       "/ella-4.png",
       "/ella-5.png",
-      "/ella-6.png",
+      "/ella-6.webp",
     ],
   },
   {
