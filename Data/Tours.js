@@ -82,11 +82,11 @@ export const tours = [
     ],
 
     images: [
-      "/ella-1.png",
-      "/ella-2.png",
-      "/ella-3.png",
-      "/ella-4.png",
-      "/ella-5.png",
+      "/ella-1.webp",
+      "/ella-2.webp",
+      "/ella-3.webp",
+      "/ella-4.webp",
+      "/ella-5.webp",
       "/ella-6.webp",
     ],
   },
@@ -115,11 +115,11 @@ export const tours = [
     ],
 
     images: [
-      "/galle-1.png",
-      "/galle-2.png",
-      "/galle-3.png",
-      "/galle-4.png",
-      "/galle-5.png",
+      "/galle-1.webp",
+      "/galle-2.webp",
+      "/galle-3.webp",
+      "/galle-4.webp",
+      "/galle-5.webp",
     ],
   },
   {
@@ -147,10 +147,10 @@ export const tours = [
     ],
 
     images: [
-      "/nuwara-2.png",
-      "/kandy-cultural-1.png",
-      "/kandy-cultural-2.png",
-      "/kandy-cultural-3.png",
+      "/kandy-cultural-2.webp",
+      "/nuwara-2.webp",
+      "/kandy-cultural-1.webp",
+      "/kandy-cultural-3.webp",
     ],
   },
   {
@@ -168,7 +168,7 @@ export const tours = [
       "Cultural experience",
       "Peaceful journey",
     ],
-    images: ["/katharagama.png", "/katharagama-2.png", "/katharagama-3.png"],
+    images: ["/katharagama.webp", "/katharagama-2.webp", "/katharagama-3.webp"],
   },
 
   {
@@ -187,11 +187,11 @@ export const tours = [
       "Relaxed coastal drive",
     ],
     images: [
-      "/hirikatiya.png",
-      "/hirikatiya-2.png",
-      "/hirikatiya-3.png",
-      "/hirikatiya-4.png",
-      "/hirikatiya-5.png",
+      "/hirikatiya.webp",
+      "/hirikatiya-4.webp",
+      "/hirikatiya-2.webp",
+      "/hirikatiya-3.webp",
+      "/hirikatiya-5.webp",
     ],
   },
 
