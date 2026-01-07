@@ -6,7 +6,7 @@ import {
   IoCallOutline,
   IoLogoWhatsapp,
   IoLogoFacebook,
-  IoLogoInstagram,
+  IoLogoYoutube,
 } from "react-icons/io5";
 
 const Footer = () => {
@@ -72,25 +72,47 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
           <div className="flex items-center gap-4">
-            {[IoLogoFacebook, IoLogoInstagram, IoLogoWhatsapp].map(
-              (Icon, i) => (
-                <a
-                  key={i}
-                  href="https://www.facebook.com/profile.php?id=100063455562022#"
-                  className="w-10 h-10 flex bg-[#4F7E9C] items-center justify-center rounded-full text-white shadow-lg transition hover:scale-110"
-                >
-                  <Icon size={20} />
-                </a>
-              )
-            )}
+            <a
+              href="https://www.facebook.com/profile.php?id=100063455562022"
+              target="_blank"
+              className="w-10 h-10 flex bg-[#4F7E9C] items-center justify-center rounded-full text-white shadow-lg transition hover:scale-110"
+            >
+              <IoLogoFacebook size={20} />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@tangocabs.srilanka"
+              target="_blank"
+              className="w-10 h-10 flex bg-[#4F7E9C] items-center justify-center rounded-full text-white shadow-lg transition hover:scale-110"
+            >
+              <IoLogoYoutube size={20} />
+            </a>
+
+            <a
+              href="https://wa.me/94777266518"
+              target="_blank"
+              className="w-10 h-10 flex bg-[#4F7E9C] items-center justify-center rounded-full text-white shadow-lg transition hover:scale-110"
+            >
+              <IoLogoWhatsapp size={20} />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="border-t border-white/20 py-6 text-center text-sm text-white/80">
-        &copy; {new Date().getFullYear()} Tango Cabs & Tours. All rights
-        reserved.
+        © {new Date().getFullYear()} Tango Cabs & Tours. All rights reserved.{" "}
+        <br />
+        <span className="text-white/70">
+          Developed by{" "}
+          <a
+            href="https://lankawebsolutions.lk"
+            target="_blank"
+            className="underline hover:text-white transition"
+          >
+            Lanka Web Solutions
+          </a>
+        </span>
       </div>
     </footer>
   );

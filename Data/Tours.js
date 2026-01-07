@@ -210,7 +210,7 @@ export const tours = [
       "Nature experience",
       "Adventure travel",
     ],
-    images: ["/yala-2.png", "/yala-1.png", "/yala-3.png", "/yala-4.png"],
+    images: ["/yala-2.webp", "/yala-1.webp", "/yala-3.webp", "/yala-4.webp"],
   },
 
   {
@@ -232,10 +232,10 @@ export const tours = [
       "Relaxed scenic drive",
     ],
     images: [
-      "/mirissa-1.png",
-      "/mirissa-2.png",
-      "/mirissa-3.png",
-      "/mirissa-4.png",
+      "/mirissa-1.webp",
+      "/mirissa-2.webp",
+      "/mirissa-3.webp",
+      "/mirissa-4.webp",
     ],
   },
 ];

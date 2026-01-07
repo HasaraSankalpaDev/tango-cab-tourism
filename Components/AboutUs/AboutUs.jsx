@@ -73,7 +73,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-2 gap-4">
             <div className="row-span-2" data-aos="fade-up" data-aos-delay="100">
               <Image
-                src="/about-1.png"
+                src="/about-1.webp"
                 alt="Sri Lanka scenic beach"
                 width={800}
                 height={800}
@@ -84,7 +84,7 @@ export default function AboutUs() {
 
             <div data-aos="fade-up" data-aos-delay="200">
               <Image
-                src="/about-2.png"
+                src="/about-2.webp"
                 alt="Sri Lanka tea plantations"
                 width={400}
                 height={400}
@@ -94,7 +94,7 @@ export default function AboutUs() {
 
             <div data-aos="fade-up" data-aos-delay="300">
               <Image
-                src="/about-3.png"
+                src="/about-3.webp"
                 alt="Sri Lanka cultural temple"
                 width={400}
                 height={400}

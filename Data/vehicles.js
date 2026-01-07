@@ -7,7 +7,7 @@ export const vehicles = [
     description:
       "Perfect for solo travelers and couples exploring Colombo and nearby attractions. Fuel-efficient and easy to navigate through city traffic.",
     features: ["Air-conditioned", "Experienced driver", "Ideal for city tours"],
-    image: "/wagonr.png",
+    image: "/wagonr.webp",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const vehicles = [
       "Professional driver",
       "Air-conditioned",
     ],
-    image: "/prius.png",
+    image: "/prius.webp",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const vehicles = [
       "Experienced chauffeur",
       "USB charging",
     ],
-    image: "/axio.png",
+    image: "/axio.webp",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ export const vehicles = [
       "Professional chauffeur",
       "WiFi available",
     ],
-    image: "/premio.png",
+    image: "/premio.webp",
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const vehicles = [
       "Good luggage capacity",
       "Air-conditioned",
     ],
-    image: "/fit-shutle.png",
+    image: "/fit-shutle.webp",
   },
   {
     id: 6,
@@ -82,6 +82,6 @@ export const vehicles = [
       "Panoramic views",
       "Professional driver",
     ],
-    image: "/vezel.png",
+    image: "/vezel.webp",
   },
 ];
