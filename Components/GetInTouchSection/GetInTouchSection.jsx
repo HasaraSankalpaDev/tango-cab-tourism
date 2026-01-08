@@ -67,29 +67,18 @@ const GetInTouchSection = () => {
     toast.loading("Sending message...", { id: "sending" });
 
     try {
-      const formDataToSend = new FormData();
-
-      formDataToSend.append(
-        "access_key",
-        "4909cec1-b93c-4770-8571-097896ae9033"
-      );
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("email", formData.email);
-      formDataToSend.append("phone", formData.phone);
-      formDataToSend.append("message", formData.message);
-
-      // Optional (recommended)
-      formDataToSend.append("subject", "New Contact Form Message");
-      formDataToSend.append("from_name", "Tango Cabs Website");
-
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: formDataToSend,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
       });
 
-      const data = await response.json();
-
-      if (data.success) {
+      if (response.ok) {
         toast.success("Message sent successfully!");
         setFormData({
           name: "",
@@ -99,7 +88,8 @@ const GetInTouchSection = () => {
           website: "",
         });
       } else {
-        toast.error(data.message || "Submission failed");
+        const data = await response.json();
+        toast.error(data.message || "Submission failed. Please try again.");
       }
     } catch (err) {
       toast.error("Something went wrong. Please try again.");

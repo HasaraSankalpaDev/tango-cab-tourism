@@ -103,7 +103,7 @@ const ReviewsSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="pt-10"></div>
+              <div className="pt-16"></div>
             </SwiperSlide>
           ))}
         </Swiper>
