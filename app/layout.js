@@ -9,6 +9,13 @@ export const metadata = {
     "Tango Cabs Sri Lanka is a trusted taxi and tour agency in Tangalle offering airport transfers, private drivers, sightseeing tours, and islandwide travel services across Sri Lanka.",
 
   keywords: [
+    "Rent a car Tangalle ",
+    "Tangalle Rent Car ",
+    "Car Rental Tangalle",
+    "Tangalle Taxi",
+    "Travel Agency Tangalle",
+    "Tour Agency Tangalle",
+    "Aiport Pickup Tangalle",
     "Tango Cabs Sri Lanka",
     "Tango Cabs",
     "Tangalle taxi service",
