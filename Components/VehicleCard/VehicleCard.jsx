@@ -69,9 +69,9 @@ const VehicleCard = ({ vehicle }) => {
       {/* Content */}
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          <h3 className="text-xl font-bold text-gray-900">{vehicle.name}</h3>
+          <h3 className="text-md font-bold text-gray-900">{vehicle.name}</h3>
 
-          <p className="text-gray-600 text-sm leading-relaxed mt-2">
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
             {vehicle.description}
           </p>
         </div>

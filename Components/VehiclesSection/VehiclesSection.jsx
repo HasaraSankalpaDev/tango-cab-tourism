@@ -27,14 +27,14 @@ const VehiclesSection = () => {
             Our Vehicles
           </h4>
           <h2
-            className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight"
+            className="text-2xl lg:text-2xl font-semibold text-gray-900 leading-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Premium Cars & Cabs For Your Journey
           </h2>
           <p
-            className="text-gray-600 text-md max-w-3xl"
+            className="text-gray-600 text-sm max-w-3xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -45,7 +45,7 @@ const VehiclesSection = () => {
         </div>
 
         {/* Vehicles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 items-stretch">
           {vehicles.map((vehicle, index) => (
             <div
               key={vehicle.id}

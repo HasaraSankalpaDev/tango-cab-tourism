@@ -8,7 +8,7 @@ const AboutHero = () => {
         backgroundImage: "url('/ella-5.webp')",
       }}
     >
-      <h1 className="text-2xl md:text-3xl font-bold text-white bg-black/30 px-4 py-2 rounded">
+      <h1 className="text-2xl md:text-2xl font-bold text-white bg-black/30 px-4 py-2 rounded">
         About Us
       </h1>
     </section>

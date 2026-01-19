@@ -12,10 +12,10 @@ const ToursSection = () => {
           <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#e8bc74] to-[#4d7c9c] font-semibold uppercase tracking-wider">
             Our Tours
           </h4>
-          <h2 className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight">
+          <h2 className="text-2xl lg:text-2xl font-semibold text-gray-900 leading-tight">
             Discover Sri Lanka With Tango Cabs & Tours
           </h2>
-          <p className="text-gray-600 text-md max-w-3xl">
+          <p className="text-gray-600 text-sm max-w-3xl">
             Explore the most beautiful corners of Sri Lanka with our curated
             tours and premium cab services. From serene beaches to breathtaking
             mountains, we make every journey safe, comfortable, and
@@ -24,7 +24,7 @@ const ToursSection = () => {
         </div>
 
         {/* Tours Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {tours.map((tour, index) => {
             // Use fixed delay classes (must be in Tailwind safelist)
             const delayClasses = [

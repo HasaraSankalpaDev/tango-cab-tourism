@@ -105,14 +105,14 @@ const GetInTouchSection = () => {
         {/* Header */}
         <div className="space-y-4 mb-12">
           <h2
-            className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight"
+            className="text-2xl lg:tex-2xl font-semibold text-gray-900 leading-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Get in Touch
           </h2>
           <p
-            className="text-gray-600 text-md max-w-3xl"
+            className="text-gray-600 text-sm max-w-3xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -121,12 +121,12 @@ const GetInTouchSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
             data-aos="fade-up"
-            className="bg-white py-8 px-4 md:px-6 rounded-lg shadow-lg space-y-6"
+            className="bg-white py-8 px-4 md:px-4 rounded-lg shadow-lg space-y-6"
           >
             {/* Honeypot */}
             <input
@@ -149,7 +149,7 @@ const GetInTouchSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 transition"
+                  className="w-full px-4 py-2 text-sm rounded-md border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 transition"
                   required
                 />
               </div>
@@ -165,7 +165,7 @@ const GetInTouchSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 outline-none bg-gray-50/50 transition"
+                  className="w-full px-4 py-2 text-sm rounded-md border border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 outline-none bg-gray-50/50 transition"
                   required
                 />
               </div>
@@ -181,7 +181,7 @@ const GetInTouchSection = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Enter 10 digit phone"
-                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-500/20 outline-none bg-gray-50/50 transition"
+                  className="w-full px-4 py-2 text-sm rounded-md border border-gray-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-500/20 outline-none bg-gray-50/50 transition"
                   required
                 />
               </div>
@@ -197,7 +197,7 @@ const GetInTouchSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Your message here..."
-                  className="w-full px-4 py-4 rounded-md border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 resize-none transition"
+                  className="w-full px-4 py-2  text-sm rounded-md border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none bg-gray-50/50 resize-none transition"
                   required
                 />
               </div>
@@ -206,7 +206,7 @@ const GetInTouchSection = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-8 cursor-pointer py-3 md:px-12 md:py-3 text-white font-semibold text-sm md:text-lg
+                className="px-8 cursor-pointer py-2  md:px-12 md:py-2 text-white font-semibold text-sm md:text-sm
                   bg-[linear-gradient(189deg,rgba(77,124,156,1)_0%,rgba(89,129,153,1)_35%,rgba(132,147,142,1)_100%,rgba(232,188,116,1)_100%)]
                   hover:opacity-90 hover:scale-[1.02] transition-transform transform rounded-sm"
               >
@@ -236,18 +236,18 @@ const GetInTouchSection = () => {
 
             {/* Contact Info Card */}
             <div className="bg-white p-8 rounded-lg shadow-lg space-y-4">
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-md font-semibold text-gray-900">
                 Contact Info
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm">
                 Feel free to reach us through any of the following:
               </p>
               <div className="space-y-3 text-gray-700">
-                <p className="flex items-center gap-3">
+                <p className="flex items-center gap-3 text-sm">
                   <IoMailOutline className="text-blue-500 text-xl" />{" "}
                   tangocabssrilanka@gmail.com
                 </p>
-                <p className="flex items-center gap-3">
+                <p className="flex items-center gap-3  text-sm">
                   <FaWhatsapp className="text-green-500 text-xl" />
                   <a
                     href="https://wa.me/94777266518"
@@ -258,13 +258,13 @@ const GetInTouchSection = () => {
                     +94 77 726 6518
                   </a>
                 </p>
-                <p className="flex items-center gap-3">
+                <p className="flex items-center gap-3  text-sm">
                   <IoCallOutline className="text-orange-500 text-xl" />
                   <a href="tel:+94777266518" className="hover:underline">
                     +94 77 726 6518
                   </a>
                 </p>
-                <p className="flex items-center gap-3">
+                <p className="flex items-center gap-3  text-sm">
                   <FaTripadvisor className="text-[#34E27D] text-xl" />{" "}
                   TripAdvisor: Tango Cabs Sri Lanka
                 </p>

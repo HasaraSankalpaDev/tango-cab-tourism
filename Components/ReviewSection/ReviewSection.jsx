@@ -50,14 +50,14 @@ const ReviewsSection = () => {
             Traveler Reviews
           </h4>
           <h2
-            className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight"
+            className="text-2xl lg:text-2xl font-semibold text-gray-900 leading-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Hear From Our Happy Travelers
           </h2>
           <p
-            className="text-gray-600 text-md max-w-3xl"
+            className="text-gray-600 text-sm max-w-3xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -89,7 +89,9 @@ const ReviewsSection = () => {
                   <h3 className="font-semibold text-gray-900">{review.name}</h3>
                   <p className="text-sm text-gray-500">{review.location}</p>
                 </div>
-                <p className="text-gray-700 mb-4 flex-1">{review.text}</p>
+                <p className="text-gray-700 mb-4 flex-1 text-sm">
+                  {review.text}
+                </p>
                 <div className="flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span

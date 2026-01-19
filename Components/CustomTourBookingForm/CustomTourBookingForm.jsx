@@ -98,7 +98,7 @@ const CustomTourBookingForm = () => {
 
     const allTouched = Object.keys(formData).reduce(
       (acc, k) => ({ ...acc, [k]: true }),
-      {}
+      {},
     );
     setTouched(allTouched);
 
@@ -150,14 +150,14 @@ const CustomTourBookingForm = () => {
     <section className="py-20 bg-gray-50">
       <Toaster position="top-right" />
       <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-2xl md:text-3xl font-semibold text-center mb-12 text-gray-800">
+        <h1 className="text-2xl md:text-2xl font-semibold text-center mb-12 text-gray-800">
           Custom Sri Lanka Tour Booking
         </h1>
 
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="bg-white py-8 px-6 md:px-10 md:py-10 rounded-md shadow-lg"
+          className="bg-white py-8 px-6 md:px-8 md:py-8 rounded-md shadow-lg"
         >
           <div className="grid md:grid-cols-2 gap-8">
             <Input
@@ -274,7 +274,7 @@ const CustomTourBookingForm = () => {
           <div className="text-center mt-10">
             <button
               type="submit"
-              className="px-12 py-3 cursor-pointer bg-[#4d7c9c] text-white text-sm md:text-lg font-semibold rounded-md hover:bg-[#3a5f7f] transition"
+              className="px-12 py-2 cursor-pointer bg-[#4d7c9c] text-white text-sm md:text-sm font-semibold rounded-sm hover:bg-[#3a5f7f] transition"
             >
               Send Tour Request
             </button>
@@ -300,7 +300,7 @@ const Input = ({ icon, label, error, touched, placeholder, ...props }) => {
         <input
           {...props}
           placeholder={placeholder}
-          className={`w-full px-4 py-3 rounded-lg border-1 outline-none transition ${
+          className={`w-full px-4 py-2 text-sm rounded-sm border-1 outline-none transition ${
             showError
               ? "border-red-500 bg-red-50"
               : "border-gray-300 focus:border-[#4d7c9c] focus:ring-[#4d7c9c]/20"
@@ -333,7 +333,7 @@ const Textarea = ({ label, error, touched, placeholder, ...props }) => {
           {...props}
           placeholder={placeholder}
           rows={3}
-          className={`w-full px-4 py-3 rounded-lg border-1 outline-none transition resize-none ${
+          className={`w-full px-4 py-2 text-sm rounded-sm border-1 outline-none transition resize-none ${
             showError
               ? "border-red-500 bg-red-50"
               : "border-gray-300 focus:border-[#4d7c9c] focus:ring-[#4d7c9c]/20"

@@ -43,7 +43,7 @@ const TourCard = ({ tour }) => {
       <div className="p-6 space-y-4 flex flex-col flex-1">
         {/* Title */}
         <Link href={`/tours/${tour.id}`}>
-          <h3 className="text-xl font-semibold text-gray-900">{tour.title}</h3>
+          <h3 className="text-md font-[600] text-gray-900">{tour.title}</h3>
         </Link>
 
         <p className="text-gray-600 text-sm line-clamp-2">
@@ -65,11 +65,11 @@ const TourCard = ({ tour }) => {
 
         {/* CTA */}
         {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+        <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 mt-auto">
           {/* WhatsApp */}
           <a
             href={`https://wa.me/94777266518?text=${encodeURIComponent(
-              message
+              message,
             )}`}
             target="_blank"
             rel="noopener noreferrer"

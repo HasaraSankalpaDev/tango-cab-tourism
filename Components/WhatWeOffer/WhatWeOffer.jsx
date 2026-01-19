@@ -68,7 +68,7 @@ export default function WhatWeOffer() {
           </h4>
 
           <h2
-            className="text-2xl lg:text-3xl font-semibold text-gray-900 mt-3"
+            className="text-2xl lg:text-2xl font-semibold text-gray-900 mt-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -76,7 +76,7 @@ export default function WhatWeOffer() {
           </h2>
 
           <p
-            className="text-gray-600 text-md mt-4"
+            className="text-gray-600 text-sm mt-4"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -87,7 +87,7 @@ export default function WhatWeOffer() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
           {offers.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -105,7 +105,7 @@ export default function WhatWeOffer() {
                   <Icon className="text-white text-2xl" />
                 </div>
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-md font-semibold text-gray-900 mb-2">
                   {item.title}
                 </h3>
 

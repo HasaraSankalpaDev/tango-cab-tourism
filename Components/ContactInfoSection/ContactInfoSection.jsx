@@ -39,16 +39,16 @@ const ContactInfoSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-3xl font-semibold text-gray-900">
+          <h2 className="text-2xl font-semibold text-gray-900">
             Contact Information
           </h2>
-          <p className="text-gray-600 mt-2">
+          <p className="text-gray-600 mt-2 text-sm">
             Reach out to us through any of the following ways
           </p>
         </div>
 
         {/* Grid updated: 2 per row on small screens, 4 on large */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {infoItems.map((item, idx) => (
             <div
               key={idx}
@@ -57,20 +57,20 @@ const ContactInfoSection = () => {
               data-aos-delay={idx * 100}
             >
               <div className="mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-md font-semibold text-gray-900 mb-2">
                 {item.title}
               </h3>
               {item.link ? (
                 <a
                   href={item.link}
-                  className="text-gray-700 hover:text-[#4d7c9c] transition break-words"
+                  className="text-gray-700 hover:text-[#4d7c9c] transition break-words text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="text-gray-700">{item.value}</p>
+                <p className="text-gray-700 text-sm">{item.value}</p>
               )}
             </div>
           ))}
