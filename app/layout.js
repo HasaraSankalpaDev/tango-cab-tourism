@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
         <link
           rel="icon"
           className="rounded-full"
-          href="https://www.tangocabssrilanka.com/logo.jpeg"
+          href="https://www.tangocabssrilanka.com/logo-transparent.png"
         />
 
         {/* Theme Color */}
