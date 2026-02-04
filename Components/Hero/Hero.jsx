@@ -17,7 +17,7 @@ const slides = [
     title: "Sigiriya The Lion's Rock",
     text: "Climb the ancient Sigiriya Rock Fortress, marvel at breathtaking frescoes, and enjoy panoramic views of lush Sri Lankan landscapes.",
     btn: "Explore Sigiriya",
-    bg: "/sigiriya-2.avif",
+    bg: "/sigiriya.png",
   },
   {
     title: "Ella Hills and Tea Plantations",
@@ -62,14 +62,14 @@ const Hero = () => {
         ref={prevRef}
         className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
       >
-        <FiChevronLeft className="text-2xl md:text-3xl" />
+        <FiChevronLeft className="text-2xl md:text-2xl" />
       </button>
 
       <button
         ref={nextRef}
         className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 z-20 text-white bg-black/40 hover:bg-black/60 p-2 md:p-3 rounded-full transition"
       >
-        <FiChevronRight className="text-2xl md:text-3xl" />
+        <FiChevronRight className="text-2xl md:text-2xl" />
       </button>
 
       {/* Swiper */}
@@ -99,7 +99,7 @@ const Hero = () => {
                 fill
                 priority={i === 0}
                 sizes="100vw"
-                className="object-cover brightness-75"
+                className="object-cover brightness-90"
               />
               <div className="absolute inset-0 bg-black/40" />
 
