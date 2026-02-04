@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
-import Image from "next/image";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -22,18 +21,23 @@ const Nav = () => {
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-18 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo-transparent.png"
-              href="/"
-              alt="Logo"
-              width={80}
-              height={80}
-              className="object-contain"
-              priority
-              sizes="80px"
-            />
+          <Link className="flex items-center gap-3" href="/">
+            <div className="text-primary">
+              <img
+                src="/logo.jpeg"
+                alt="Green Lobster Logo"
+                className="rounded-full w-9 h-9 "
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <h1 className="text-md font-semibold tracking-tight text-neutral-900">
+                Tango Cabs
+              </h1>
+              <span className="text-[8px] tracking-wider uppercase text-primary/80 font-medium">
+                Sri Lanka
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -96,7 +100,7 @@ const Nav = () => {
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden text-3xl text-gray-800"
             >
-              {menuOpen ? <FiX /> : <FiMenu />}
+              {menuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
             </button>
           </div>
         </div>
