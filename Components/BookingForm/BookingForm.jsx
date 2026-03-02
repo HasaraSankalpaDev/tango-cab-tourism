@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   IoPersonOutline,
   IoMailOutline,
@@ -11,8 +11,9 @@ import {
   IoLogoWhatsapp,
 } from "react-icons/io5";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+const gradient =
+  "linear-gradient(188deg, rgba(79,126,156,1) 0%, rgba(117,156,158,1) 54%, rgba(144,163,149,1) 79%, rgba(172,171,139,1) 90%, rgba(232,188,118,1) 100%)";
 
 const WHATSAPP_NUMBER = "94777266518";
 
@@ -28,7 +29,6 @@ const locations = [
   "Airport to Mirissa Beach Transfer",
 ];
 
-// Simple text sanitizer
 const cleanText = (text) => text.replace(/[<>]/g, "").trim();
 
 export const BookingForm = ({ tour }) => {
@@ -42,20 +42,11 @@ export const BookingForm = ({ tour }) => {
     message: "",
   });
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-  }, []);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Client-side validation
   const validateForm = () => {
     if (!/^[a-zA-Z\s]{2,40}$/.test(formData.name)) {
       alert("Please enter a valid name (letters only)");
@@ -83,255 +74,408 @@ export const BookingForm = ({ tour }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    const message = `
-Hi, I’m interested in booking a tour.
-
-Name: ${cleanText(formData.name)}
-Email: ${cleanText(formData.email)}
-Phone: ${cleanText(formData.phone)}
-
-I would like to know about the availability for the following tour:
-Tour: ${cleanText(formData.location)}
-Preferred Date: ${formData.date}
-Number of Persons: ${formData.persons}
-
-Additional Requests / Questions:
-${cleanText(formData.message || "No special requests")}
-
-Could you please provide more details and options? Thank you!
-`;
-
-    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(whatsappURL, "_blank");
+    const message = `Hi, I'm interested in booking a tour.\n\nName: ${cleanText(formData.name)}\nEmail: ${cleanText(formData.email)}\nPhone: ${cleanText(formData.phone)}\n\nTour: ${cleanText(formData.location)}\nPreferred Date: ${formData.date}\nNumber of Persons: ${formData.persons}\n\nAdditional Requests:\n${cleanText(formData.message || "No special requests")}\n\nCould you please provide more details? Thank you!`;
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+      "_blank",
+    );
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mb-12" data-aos="fade-up">
-          <h1 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Book Your Dream Tour
-          </h1>
-          <p className="text-gray-600 text-base sm:text-lg">
-            Fill in your details and we'll contact you shortly
-          </p>
-        </div>
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
 
-        {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-8 bg-white py-8 px-6 lg:py-12 lg:px-8 rounded-lg shadow-xl"
-          data-aos="fade-up"
-          data-aos-delay="100"
+        .bf-root { font-family: 'DM Sans', sans-serif; }
+
+        .bf-label {
+          display: flex;
+          align-items: center;
+          gap: 0.45rem;
+          font-size: 0.72rem;
+          font-weight: 500;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: #555;
+          margin-bottom: 0.5rem;
+        }
+
+        .bf-input {
+          width: 100%;
+          padding: 0.7rem 1rem;
+          font-size: 0.875rem;
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 300;
+          color: #222;
+          background: #fafaf8;
+          border: 1px solid rgba(0,0,0,0.12);
+          border-radius: 3px;
+          outline: none;
+          transition: border-color 0.25s ease, box-shadow 0.25s ease;
+          box-sizing: border-box;
+        }
+        .bf-input:focus {
+          border-color: rgba(79,126,156,0.65);
+          box-shadow: 0 0 0 3px rgba(79,126,156,0.1);
+        }
+        .bf-input::placeholder { color: #bbb; font-weight: 300; }
+
+        .bf-form-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.25rem;
+        }
+        @media (max-width: 639px) { .bf-form-grid { grid-template-columns: 1fr; } }
+
+        .bf-full { grid-column: 1 / -1; }
+        @media (max-width: 639px) { .bf-full { grid-column: 1; } }
+
+        .bf-submit {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 0.85rem 2.5rem;
+          font-size: 0.75rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-family: 'DM Sans', sans-serif;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 2px;
+          background: #25D366;
+          transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .bf-submit:hover { opacity: 0.9; transform: scale(1.02); }
+
+        .bf-contact-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.55rem 1.1rem;
+          font-size: 0.8rem;
+          font-weight: 400;
+          color: #555;
+          background: #fff;
+          border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 2rem;
+          text-decoration: none;
+          transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        .bf-contact-link:hover { border-color: #4d7c9c; color: #4d7c9c; }
+
+        .bf-wa-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.6rem 1.25rem;
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: white;
+          background: #25D366;
+          border: none;
+          border-radius: 2rem;
+          text-decoration: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .bf-wa-link:hover { opacity: 0.9; transform: scale(1.03); }
+      `}</style>
+
+      <section
+        className="bf-root"
+        style={{ padding: "6rem 0", background: "#fff" }}
+      >
+        <div
+          style={{ maxWidth: "900px", margin: "0 auto", padding: "0 1.5rem" }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Full Name */}
-            <div className="space-y-2" data-aos="fade-up" data-aos-delay="150">
-              <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <IoPersonOutline className="text-[#4d7c9c]" />
-                Full Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Enter your full name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50"
-              />
-            </div>
-
-            {/* Email */}
-            <div className="space-y-2" data-aos="fade-up" data-aos-delay="200">
-              <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <IoMailOutline className="text-[#4d7c9c]" />
-                Email Address
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="your@email.com"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50"
-              />
-            </div>
-
-            {/* Phone */}
-            <div className="space-y-2" data-aos="fade-up" data-aos-delay="250">
-              <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <IoCallOutline className="text-[#4d7c9c]" />
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                placeholder="+94 77 123 4567"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50"
-              />
-            </div>
-
-            {/* Date */}
-            <div className="space-y-2" data-aos="fade-up" data-aos-delay="300">
-              <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <IoCalendarOutline className="text-[#4d7c9c]" />
-                Preferred Date
-              </label>
-              <input
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50"
-              />
-            </div>
-
-            {/* Persons */}
-            <div className="space-y-2" data-aos="fade-up" data-aos-delay="350">
-              <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <IoPersonOutline className="text-[#4d7c9c]" />
-                Number of Persons
-              </label>
-              <input
-                type="number"
-                name="persons"
-                min="1"
-                max="20"
-                value={formData.persons}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50"
-              />
-            </div>
-
-            {/* Location */}
-            <div className="space-y-2" data-aos="fade-up" data-aos-delay="400">
-              <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <IoLocationOutline className="text-[#4d7c9c]" />
-                Preferred Safari Location
-              </label>
-              <select
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50 cursor-pointer"
-              >
-                <option value="">Select a location</option>
-                {locations.map((loc) => (
-                  <option key={loc} value={loc}>
-                    {loc}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Message */}
-          <div className="space-y-2" data-aos="fade-up" data-aos-delay="450">
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-              <IoChatbubbleOutline className="text-[#4d7c9c]" />
-              Special Requests or Message (Optional)
-            </label>
-            <textarea
-              name="message"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Any special requirements, dietary needs, or questions..."
-              className="w-full px-4 py-4 rounded-lg border border-gray-300 focus:border-[#4d7c9c] focus:ring-4 focus:ring-[#4d7c9c]/20 outline-none transition-all bg-gray-50/50 resize-none"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="text-center" data-aos="fade-up" data-aos-delay="500">
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center px-8 sm:px-12 py-2 sm:py-3 rounded-md text-white text-sm sm:text-base font-semibold
-  bg-[#25D366] hover:bg-[#1DA851] transition"
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.75rem",
+                marginBottom: "1.25rem",
+              }}
             >
-              <IoLogoWhatsapp className="mr-2 text-xl" />
-              Send via WhatsApp
-            </button>
-
-            <p className="mt-4 text-sm text-gray-500">
-              We'll open WhatsApp with your booking details.
+              <span
+                style={{
+                  width: "1.75rem",
+                  height: "1px",
+                  background: gradient,
+                  display: "block",
+                }}
+              />
+              <span
+                style={{
+                  fontSize: "0.68rem",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  fontWeight: 600,
+                  background: gradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Book Now
+              </span>
+              <span
+                style={{
+                  width: "1.75rem",
+                  height: "1px",
+                  background: gradient,
+                  display: "block",
+                }}
+              />
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(1.9rem, 3vw, 2.6rem)",
+                fontWeight: 600,
+                color: "#111",
+                lineHeight: 1.2,
+                margin: "0 0 0.75rem",
+              }}
+            >
+              Book Your Dream Tour
+            </h2>
+            <div
+              style={{
+                width: "2.5rem",
+                height: "1px",
+                background: gradient,
+                margin: "0 auto 1rem",
+              }}
+            />
+            <p
+              style={{
+                fontSize: "0.875rem",
+                color: "#555",
+                lineHeight: 1.85,
+                fontWeight: 300,
+              }}
+            >
+              Fill in your details and we'll contact you shortly
             </p>
           </div>
-        </form>
 
-        {/* Contact Info */}
-        <div
-          className="mt-12 text-center space-y-4"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          <div className="flex justify-center items-center gap-2">
-            <Image
-              src="/tripadvisor.png"
-              alt="TripAdvisor"
-              width={120}
-              height={40}
-              className="object-contain"
-            />
-            <span className="text-gray-700 font-medium">
-              Trusted by TripAdvisor
-            </span>
-          </div>
+          {/* Form card */}
+          <form
+            onSubmit={handleSubmit}
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: "4px",
+              padding: "2.5rem",
+            }}
+          >
+            <div className="bf-form-grid">
+              <div>
+                <label className="bf-label">
+                  <IoPersonOutline style={{ color: "#4d7c9c" }} /> Full Name
+                </label>
+                <input
+                  className="bf-input"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
 
-          <div className="flex justify-center mt-8 flex-wrap gap-6 text-gray-700">
-            {/* Email */}
-            <a
-              href="mailto:tangocabssrilanka@gmail.com"
-              className="flex items-center gap-2 px-4 py-2 rounded-full
-    bg-white shadow-sm border border-gray-200
-    hover:border-[#4d7c9c] hover:text-[#4d7c9c]
-    transition-all duration-300"
+              <div>
+                <label className="bf-label">
+                  <IoMailOutline style={{ color: "#4d7c9c" }} /> Email Address
+                </label>
+                <input
+                  className="bf-input"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="bf-label">
+                  <IoCallOutline style={{ color: "#4d7c9c" }} /> Phone Number
+                </label>
+                <input
+                  className="bf-input"
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="+94 77 123 4567"
+                />
+              </div>
+
+              <div>
+                <label className="bf-label">
+                  <IoCalendarOutline style={{ color: "#4d7c9c" }} /> Preferred
+                  Date
+                </label>
+                <input
+                  className="bf-input"
+                  type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="bf-label">
+                  <IoPersonOutline style={{ color: "#4d7c9c" }} /> Number of
+                  Persons
+                </label>
+                <input
+                  className="bf-input"
+                  type="number"
+                  name="persons"
+                  min="1"
+                  max="20"
+                  value={formData.persons}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="bf-label">
+                  <IoLocationOutline style={{ color: "#4d7c9c" }} /> Preferred
+                  Safari Location
+                </label>
+                <select
+                  className="bf-input"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  required
+                  style={{ cursor: "pointer" }}
+                >
+                  <option value="">Select a location</option>
+                  {locations.map((loc) => (
+                    <option key={loc} value={loc}>
+                      {loc}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="bf-full">
+                <label className="bf-label">
+                  <IoChatbubbleOutline style={{ color: "#4d7c9c" }} /> Special
+                  Requests (Optional)
+                </label>
+                <textarea
+                  className="bf-input"
+                  name="message"
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Any special requirements, dietary needs, or questions..."
+                  style={{ resize: "none" }}
+                />
+              </div>
+            </div>
+
+            <div
+              style={{
+                textAlign: "center",
+                marginTop: "2.25rem",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "0.75rem",
+              }}
             >
-              <IoMailOutline className="text-lg" />
-              tangocabssrilanka@gmail.com
-            </a>
+              <button type="submit" className="bf-submit">
+                <IoLogoWhatsapp size={16} />
+                Send via WhatsApp
+              </button>
+              <p
+                style={{
+                  fontSize: "0.75rem",
+                  color: "#aaa",
+                  fontWeight: 300,
+                  letterSpacing: "0.04em",
+                }}
+              >
+                We'll open WhatsApp with your booking details
+              </p>
+            </div>
+          </form>
 
-            {/* Phone */}
-            <a
-              href="tel:+94777266518"
-              className="flex items-center gap-2 px-4 py-2 rounded-full
-    bg-white shadow-sm border border-gray-200
-    hover:border-[#4d7c9c] hover:text-[#4d7c9c]
-    transition-all duration-300"
+          {/* Footer contact strip */}
+          <div
+            style={{
+              marginTop: "3rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1.5rem",
+            }}
+          >
+            {/* TripAdvisor */}
+            <div
+              style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}
             >
-              <IoCallOutline className="text-lg" />
-              +94 77 726 6518
-            </a>
+              <Image
+                src="/tripadvisor.png"
+                alt="TripAdvisor"
+                width={110}
+                height={36}
+                style={{ objectFit: "contain" }}
+              />
+              <span
+                style={{ fontSize: "0.8rem", color: "#666", fontWeight: 300 }}
+              >
+                Trusted by TripAdvisor
+              </span>
+            </div>
 
-            {/* WhatsApp */}
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full
-    bg-[#25D366] text-white font-semibold
-    shadow-lg shadow-green-500/30
-    hover:scale-105 hover:shadow-xl
-    transition-all duration-300"
+            {/* Contact links */}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: "0.75rem",
+              }}
             >
-              <IoLogoWhatsapp className="text-xl" />
-              Chat on WhatsApp
-            </a>
+              <a
+                href="mailto:tangocabssrilanka@gmail.com"
+                className="bf-contact-link"
+              >
+                <IoMailOutline size={15} /> tangocabssrilanka@gmail.com
+              </a>
+              <a href="tel:+94777266518" className="bf-contact-link">
+                <IoCallOutline size={15} /> +94 77 726 6518
+              </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noreferrer"
+                className="bf-wa-link"
+              >
+                <IoLogoWhatsapp size={15} /> Chat on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
